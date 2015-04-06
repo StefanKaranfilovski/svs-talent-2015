@@ -236,6 +236,7 @@
             this.txtDepositAccountInterestRatePercent.Name = "txtDepositAccountInterestRatePercent";
             this.txtDepositAccountInterestRatePercent.Size = new System.Drawing.Size(94, 20);
             this.txtDepositAccountInterestRatePercent.TabIndex = 4;
+            this.txtDepositAccountInterestRatePercent.Text = "2";
             // 
             // lblEndDate
             // 
@@ -324,6 +325,7 @@
             this.txtDepositAccountTimePeriodPeriod.Name = "txtDepositAccountTimePeriodPeriod";
             this.txtDepositAccountTimePeriodPeriod.Size = new System.Drawing.Size(94, 20);
             this.txtDepositAccountTimePeriodPeriod.TabIndex = 0;
+            this.txtDepositAccountTimePeriodPeriod.Text = "1";
             // 
             // gbAccountFromProperties
             // 
@@ -811,7 +813,6 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Account Details Form";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbCreateDepositAccount.ResumeLayout(false);
             this.gbCreateDepositAccount.PerformLayout();
             this.gbInterestRateDepositAccount.ResumeLayout(false);

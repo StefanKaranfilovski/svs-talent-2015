@@ -95,7 +95,6 @@ namespace DomainModel.Libraries.Classes
             this.Number = number;
             this.Currency = currency;
 
-            //TODO Make sure this is the way the properties work
             CurrencyAmount a = new CurrencyAmount();
             a.Amount = 0;
             a.Currency = currency;
@@ -125,7 +124,7 @@ namespace DomainModel.Libraries.Classes
         /// <returns></returns>
         public virtual TransactionStatus DebitAmount(CurrencyAmount amount)
         {
-            if (checkAmountCurrency(amount) == TransactionStatus.InProcess)
+            if (CheckAmountCurrency(amount) == TransactionStatus.InProcess)
             {
                 CurrencyAmount a = this.Balance;
                 a.Amount -= amount.Amount;
@@ -145,7 +144,7 @@ namespace DomainModel.Libraries.Classes
         /// <returns></returns>
         public virtual TransactionStatus CreditAmount(CurrencyAmount amount)
         {
-            if (checkAmountCurrency(amount) == TransactionStatus.InProcess)
+            if (CheckAmountCurrency(amount) == TransactionStatus.InProcess)
             {
                 CurrencyAmount a = this.Balance;
                 a.Amount += amount.Amount;
@@ -167,7 +166,7 @@ namespace DomainModel.Libraries.Classes
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
-        private TransactionStatus checkAmountCurrency(CurrencyAmount amount)
+        private TransactionStatus CheckAmountCurrency(CurrencyAmount amount)
         {
             if (this.Currency != amount.Currency)
             {

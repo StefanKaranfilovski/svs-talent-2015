@@ -43,7 +43,6 @@ namespace DomainModel.Libraries.Classes
         public TransactionAccount(string currency, decimal limitAmount)
             : base(currency)
         {
-            //TODO Check if this is how initializing properties work
             CurrencyAmount c = new CurrencyAmount();
             c.Amount = limitAmount;
             this.Limit = c;

@@ -14,7 +14,6 @@ namespace DomainModel.Libraries.Classes
     {
         #region Constructors
 
-        //TODO Check the implementation of the constructor
         public LoanAccount(string currency, TimePeriod depositPeriod, InterestRate interestRate,
                             DateTime startDate, DateTime endDate, ITransactionAccount transactionAccount)
             : base(currency, depositPeriod, interestRate, startDate, endDate, transactionAccount)
@@ -28,19 +27,13 @@ namespace DomainModel.Libraries.Classes
 
         public override TransactionStatus DebitAmount(CurrencyAmount amount)
         {
-            CurrencyAmount a = base.Balance;
-            a.Amount += amount.Amount;
-            //TODO How to access the base property?
-            //this.Balance = a;
+            base.CreditAmount(amount);
             return TransactionStatus.Completed;
         }
 
         public override TransactionStatus CreditAmount(CurrencyAmount amount)
         {
-            CurrencyAmount a = base.Balance;
-            a.Amount -= amount.Amount;
-            //TODO How to access the base property?
-            //this.Balance = a;
+            base.DebitAmount(amount);
             return TransactionStatus.Completed;
         }
 

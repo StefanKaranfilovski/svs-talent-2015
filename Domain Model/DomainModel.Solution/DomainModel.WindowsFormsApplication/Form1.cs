@@ -26,7 +26,7 @@ namespace DomainModel.WindowsFormsApplication
         /// <param name="e"></param>
         private void btnCreateTransactionAccount_Click(object sender, EventArgs e)
         {
-            createAndPopulateTransactionAccount();
+            CreateAndPopulateTransactionAccount();
         }
 
         /// <summary>
@@ -37,62 +37,53 @@ namespace DomainModel.WindowsFormsApplication
         /// <param name="e"></param>
         private void btnCreateDepositAccount_Click(object sender, EventArgs e)
         {
-            createAndPopulateDepositAccount();
+            CreateAndPopulateDepositAccount();
         }
 
         private void btnMakeTransaction_Click(object sender, EventArgs e)
         {
             //TODO Check method implementation
-            ITransactionAccount transactonAccount = createTransactionAccount();
-            IDepositAccount depositAccount = createDepositAccount();
-            ILoanAccount loanAccount = createLoanAccount();
+            ITransactionAccount transactonAccount = CreateTransactionAccount();
+            IDepositAccount depositAccount = CreateDepositAccount();
+            ILoanAccount loanAccount = CreateLoanAccount();
             CurrencyAmount ca = new CurrencyAmount();
             ca.Amount = 20000;
             ca.Currency = "MKD";
 
             ITransactionProcessor transactionProcessor = new TransactionProcessor();
-            transactionProcessor.ProcessTransaction(TransactionType.Transfer, ca, loanAccount, depositAccount);
+            transactionProcessor.ProcessTransaction(TransactionType.Transfer, ca, transactonAccount, depositAccount);
 
-            populateTransactionAccountProperties(transactonAccount);
-            populateDepositAccountProperties(depositAccount);
+            PopulateTransactionAccountProperties(transactonAccount);
+            PopulateDepositAccountProperties(depositAccount);
         }
 
         #endregion
 
         #region Account Methods
 
-        private void populateAccountProperties(IAccount account)
+        private void PopulateAccountProperties(IAccount account)
         {
-            //TODO Ask about the implementation
-            lblAccountFromPropertiesID.Text = account.ID.ToString();
-            lblAccountFromPropertiesNumber.Text = account.Number.ToString();
-            lblAccountFromPropertiesCurrencyAmount.Text = account.Currency.ToString();
-            lblAccountFromPropertiesBalanceAmount.Text = account.Balance.Amount.ToString();
-            lblAccountFromPropertiesBalanceCurrnecyBalance.Text = account.Balance.Currency.ToString();
-            
-            checkAccountType(account);
+            CheckAccountType(account);
         }
 
-        private void checkAccountType(IAccount account)
+        private void CheckAccountType(IAccount account)
         {
             if (account is ITransactionAccount)
             {
-                populateTransactionAccountProperties(account);
-                clearDepositAccountProperties();
+                PopulateTransactionAccountProperties(account);
             }
-            else if (account is IDepositAccount)
+
+            if (account is IDepositAccount)
             {
-                populateDepositAccountProperties((IDepositAccount)account);
-                clearTransactionAccountProperties();
+                PopulateDepositAccountProperties((IDepositAccount)account);
             }
         }
-
 
         #endregion
 
         #region Transaction Account Methods4
 
-        private ITransactionAccount createTransactionAccount()
+        private ITransactionAccount CreateTransactionAccount()
         {
             string currency = txtTransactionAccountCurrency.MakeString();
             decimal amount = txtTransactionAccountLimit.MakeDecimal();
@@ -101,21 +92,27 @@ namespace DomainModel.WindowsFormsApplication
             return transactionAccount;
         }
 
-        private void createAndPopulateTransactionAccount()
+        private void CreateAndPopulateTransactionAccount()
         {
-            ITransactionAccount transactionAccount = createTransactionAccount();
+            ITransactionAccount transactionAccount = CreateTransactionAccount();
 
-            populateAccountProperties(transactionAccount);
+            PopulateAccountProperties(transactionAccount);
         }
 
-        private void clearTransactionAccountProperties()
+        private void ClearTransactionAccountProperties()
         {
             lblTransactionAccountPropertiesLimitAmount.Text = String.Empty;
             lblTransactionAccountPropertiesLimitCurrency.Text = String.Empty;
         }
 
-        private void populateTransactionAccountProperties(IAccount account)
+        private void PopulateTransactionAccountProperties(IAccount account)
         {
+            lblAccountFromPropertiesID.Text = account.ID.ToString();
+            lblAccountFromPropertiesNumber.Text = account.Number.ToString();
+            lblAccountFromPropertiesCurrencyAmount.Text = account.Currency.ToString();
+            lblAccountFromPropertiesBalanceAmount.Text = account.Balance.Amount.ToString();
+            lblAccountFromPropertiesBalanceCurrnecyBalance.Text = account.Balance.Currency.ToString();
+
             lblTransactionAccountPropertiesLimitAmount.Text = account.Balance.Amount.ToString();
             lblTransactionAccountPropertiesLimitCurrency.Text = account.Balance.Currency.ToString();
         }
@@ -124,34 +121,32 @@ namespace DomainModel.WindowsFormsApplication
 
         #region Deposit Account Methods
 
-        private IDepositAccount createDepositAccount()
+        private IDepositAccount CreateDepositAccount()
         {
-            //TODO Should I use "new" with structs
             TimePeriod timePeriod = new TimePeriod();
             timePeriod.Period = txtDepositAccountTimePeriodPeriod.MakeInt32();
-            timePeriod.Unit = setUnitOfTimeFromComboBox(cbDepositAccountTimePeriodUnit.MakeString());
+            timePeriod.Unit = SetUnitOfTimeFromComboBox(cbDepositAccountTimePeriodUnit.MakeString());
 
             InterestRate interestRate = new InterestRate();
             interestRate.Percent = txtDepositAccountInterestRatePercent.MakeDecimal();
-            interestRate.Unit = setUnitOfTimeFromComboBox(cbDepositAccountInterestRateUnit.MakeString());
+            interestRate.Unit = SetUnitOfTimeFromComboBox(cbDepositAccountInterestRateUnit.MakeString());
 
             string currency = txtTransactionAccountCurrency.MakeString();
             DateTime startDate = dtpDepositAccountStartDate.MakeDateTime();
             DateTime endDate = dtpDepositAccountEndDate.MakeDateTime();
-            ITransactionAccount transactionAccount = createTransactionAccount();
+            ITransactionAccount transactionAccount = CreateTransactionAccount();
             IDepositAccount depositAccount = new DepositAccount(currency, timePeriod, interestRate, startDate, endDate, transactionAccount);
 
             return depositAccount;
         }
 
-        private void createAndPopulateDepositAccount()
+        private void CreateAndPopulateDepositAccount()
         {
-
-            IDepositAccount depositAccount = createDepositAccount();
-            populateAccountProperties(depositAccount);
+            IDepositAccount depositAccount = CreateDepositAccount();
+            PopulateAccountProperties(depositAccount);
         }
 
-        private void clearDepositAccountProperties()
+        private void ClearDepositAccountProperties()
         {
             lblDepositPropertiesTimePeriodPeriod.Text = String.Empty;
             lblDepositPropertiesTimePeriodUnitOfTime.Text = String.Empty;
@@ -163,8 +158,14 @@ namespace DomainModel.WindowsFormsApplication
             lblDepositPropertiesEndDate.Text = String.Empty;
         }
 
-        private void populateDepositAccountProperties(IDepositAccount depositAccount)
+        private void PopulateDepositAccountProperties(IDepositAccount depositAccount)
         {
+            lblAccountToPropertiesID.Text = depositAccount.ID.ToString();
+            lblAccountToPropertiesNumber.Text = depositAccount.Number.ToString();
+            lblAccountToPropertiesCurrencyAmount.Text = depositAccount.Currency.ToString();
+            lblAccountToPropertiesBalanceAmount.Text = depositAccount.Balance.Amount.ToString();
+            lblAccountToPropertiesBalanceCurrencyBalance.Text = depositAccount.Balance.Currency.ToString();
+
             lblDepositPropertiesTimePeriodPeriod.Text = depositAccount.Period.Period.ToString();
             lblDepositPropertiesTimePeriodUnitOfTime.Text = depositAccount.Period.Unit.ToString();
 
@@ -179,20 +180,20 @@ namespace DomainModel.WindowsFormsApplication
 
         #region Loan Account Methods
 
-        private ILoanAccount createLoanAccount()
+        private ILoanAccount CreateLoanAccount()
         {
             TimePeriod timePeriod = new TimePeriod();
             timePeriod.Period = txtDepositAccountTimePeriodPeriod.MakeInt32();
-            timePeriod.Unit = setUnitOfTimeFromComboBox(cbDepositAccountTimePeriodUnit.MakeString());
+            timePeriod.Unit = SetUnitOfTimeFromComboBox(cbDepositAccountTimePeriodUnit.MakeString());
 
             InterestRate interestRate = new InterestRate();
             interestRate.Percent = txtDepositAccountInterestRatePercent.MakeDecimal();
-            interestRate.Unit = setUnitOfTimeFromComboBox(cbDepositAccountInterestRateUnit.MakeString());
+            interestRate.Unit = SetUnitOfTimeFromComboBox(cbDepositAccountInterestRateUnit.MakeString());
 
             string currency = txtTransactionAccountCurrency.MakeString();
             DateTime startDate = dtpDepositAccountStartDate.MakeDateTime();
             DateTime endDate = dtpDepositAccountEndDate.MakeDateTime();
-            ITransactionAccount transactionAccount = createTransactionAccount();
+            ITransactionAccount transactionAccount = CreateTransactionAccount();
             ILoanAccount loanAccount = new LoanAccount(currency, timePeriod, interestRate, startDate, endDate, transactionAccount);
 
             return loanAccount;
@@ -202,7 +203,7 @@ namespace DomainModel.WindowsFormsApplication
 
         #region Utility Methods
 
-        private UnitOfTime setUnitOfTimeFromComboBox(string s)
+        private UnitOfTime SetUnitOfTimeFromComboBox(string s)
         {
             switch (s.ToLower())
             {
@@ -218,10 +219,5 @@ namespace DomainModel.WindowsFormsApplication
         }
 
         #endregion
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
