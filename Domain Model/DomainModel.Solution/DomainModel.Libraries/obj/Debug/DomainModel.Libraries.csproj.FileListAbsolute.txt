@@ -1,0 +1,10 @@
+c:\users\laptopo\documents\visual studio 2013\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.csprojResolveAssemblyReference.cache
+c:\users\laptopo\documents\visual studio 2013\Projects\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.dll
+c:\users\laptopo\documents\visual studio 2013\Projects\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.pdb
+c:\users\laptopo\documents\visual studio 2013\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.dll
+c:\users\laptopo\documents\visual studio 2013\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.pdb
+C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.dll
+C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.pdb
+C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.csprojResolveAssemblyReference.cache
+C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.dll
+C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.pdb
