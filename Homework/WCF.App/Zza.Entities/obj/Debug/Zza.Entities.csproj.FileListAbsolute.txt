@@ -1,0 +1,4 @@
+C:\Users\Laptopo\Desktop\4-wcf-jumpstart-exercise-files\after\ZzaApp\Zza.Entities\bin\Debug\Zza.Entities.dll
+C:\Users\Laptopo\Desktop\4-wcf-jumpstart-exercise-files\after\ZzaApp\Zza.Entities\bin\Debug\Zza.Entities.pdb
+C:\Users\Laptopo\Desktop\4-wcf-jumpstart-exercise-files\after\ZzaApp\Zza.Entities\obj\Debug\Zza.Entities.dll
+C:\Users\Laptopo\Desktop\4-wcf-jumpstart-exercise-files\after\ZzaApp\Zza.Entities\obj\Debug\Zza.Entities.pdb
