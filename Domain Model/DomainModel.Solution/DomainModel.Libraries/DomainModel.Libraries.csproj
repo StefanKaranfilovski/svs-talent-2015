@@ -43,6 +43,7 @@
     <Compile Include="Classes\DepositAccount.cs" />
     <Compile Include="Classes\LoanAccount.cs" />
     <Compile Include="Classes\TransactionAccount.cs" />
+    <Compile Include="Delegates\Delegates.cs" />
     <Compile Include="Enumerations\TransactionStatus.cs" />
     <Compile Include="Enumerations\TransactionType.cs" />
     <Compile Include="Enumerations\UnitOfTime.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Interfaces\ILoanAccount.cs" />
     <Compile Include="Interfaces\ITransactionAccount.cs" />
     <Compile Include="Interfaces\ITransactionProcessor.cs" />
+    <Compile Include="Processors\TransactionLogEntry.cs" />
     <Compile Include="Processors\TransactionProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structures\CurrencyAmount.cs" />

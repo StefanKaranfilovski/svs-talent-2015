@@ -96,6 +96,19 @@
             this.lblAccountToPropertiesNumber = new System.Windows.Forms.Label();
             this.lblAccountToPropertiesID = new System.Windows.Forms.Label();
             this.btnMakeTransaction = new System.Windows.Forms.Button();
+            this.btnMakeGroupTransaction = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblTransactionCount = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblLogEntryCurrnecyAmountCurrency = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lblLogEntryCurrencyAmountAmount = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.lblLogEntryStatus = new System.Windows.Forms.Label();
+            this.lblLogEntryType = new System.Windows.Forms.Label();
             this.gbCreateDepositAccount.SuspendLayout();
             this.gbInterestRateDepositAccount.SuspendLayout();
             this.gbTimePeriodDepositAccount.SuspendLayout();
@@ -109,6 +122,8 @@
             this.gbCreateTransactionAccount.SuspendLayout();
             this.gbAccountToProperties.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
@@ -677,7 +692,7 @@
             this.gbAccountToProperties.Controls.Add(this.label8);
             this.gbAccountToProperties.Controls.Add(this.lblAccountToPropertiesNumber);
             this.gbAccountToProperties.Controls.Add(this.lblAccountToPropertiesID);
-            this.gbAccountToProperties.Location = new System.Drawing.Point(377, 189);
+            this.gbAccountToProperties.Location = new System.Drawing.Point(377, 218);
             this.gbAccountToProperties.Name = "gbAccountToProperties";
             this.gbAccountToProperties.Size = new System.Drawing.Size(172, 142);
             this.gbAccountToProperties.TabIndex = 11;
@@ -797,11 +812,142 @@
             this.btnMakeTransaction.UseVisualStyleBackColor = true;
             this.btnMakeTransaction.Click += new System.EventHandler(this.btnMakeTransaction_Click);
             // 
+            // btnMakeGroupTransaction
+            // 
+            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(377, 189);
+            this.btnMakeGroupTransaction.Name = "btnMakeGroupTransaction";
+            this.btnMakeGroupTransaction.Size = new System.Drawing.Size(172, 23);
+            this.btnMakeGroupTransaction.TabIndex = 13;
+            this.btnMakeGroupTransaction.Text = "Make Group Transaction";
+            this.btnMakeGroupTransaction.UseVisualStyleBackColor = true;
+            this.btnMakeGroupTransaction.Click += new System.EventHandler(this.btnMakeGroupTransaction_Click);
+            // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(202, 311);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(94, 15);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Transaction count";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblTransactionCount
+            // 
+            this.lblTransactionCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTransactionCount.Location = new System.Drawing.Point(302, 311);
+            this.lblTransactionCount.Name = "lblTransactionCount";
+            this.lblTransactionCount.Size = new System.Drawing.Size(59, 15);
+            this.lblTransactionCount.TabIndex = 17;
+            this.lblTransactionCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.groupBox4);
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.label27);
+            this.groupBox3.Controls.Add(this.lblLogEntryStatus);
+            this.groupBox3.Controls.Add(this.lblLogEntryType);
+            this.groupBox3.Location = new System.Drawing.Point(199, 334);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(172, 116);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Transaction log entry details:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.lblLogEntryCurrnecyAmountCurrency);
+            this.groupBox4.Controls.Add(this.label23);
+            this.groupBox4.Controls.Add(this.lblLogEntryCurrencyAmountAmount);
+            this.groupBox4.Location = new System.Drawing.Point(6, 54);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(160, 56);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Currency amount:";
+            // 
+            // label21
+            // 
+            this.label21.Location = new System.Drawing.Point(6, 37);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(50, 13);
+            this.label21.TabIndex = 14;
+            this.label21.Text = "Currency";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblLogEntryCurrnecyAmountCurrency
+            // 
+            this.lblLogEntryCurrnecyAmountCurrency.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLogEntryCurrnecyAmountCurrency.Location = new System.Drawing.Point(62, 36);
+            this.lblLogEntryCurrnecyAmountCurrency.Name = "lblLogEntryCurrnecyAmountCurrency";
+            this.lblLogEntryCurrnecyAmountCurrency.Size = new System.Drawing.Size(94, 15);
+            this.lblLogEntryCurrnecyAmountCurrency.TabIndex = 4;
+            this.lblLogEntryCurrnecyAmountCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label23
+            // 
+            this.label23.Location = new System.Drawing.Point(6, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(50, 13);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Amount";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblLogEntryCurrencyAmountAmount
+            // 
+            this.lblLogEntryCurrencyAmountAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLogEntryCurrencyAmountAmount.Location = new System.Drawing.Point(62, 16);
+            this.lblLogEntryCurrencyAmountAmount.Name = "lblLogEntryCurrencyAmountAmount";
+            this.lblLogEntryCurrencyAmountAmount.Size = new System.Drawing.Size(94, 15);
+            this.lblLogEntryCurrencyAmountAmount.TabIndex = 3;
+            this.lblLogEntryCurrencyAmountAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label25
+            // 
+            this.label25.Location = new System.Drawing.Point(12, 37);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(50, 13);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "Status";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label27
+            // 
+            this.label27.Location = new System.Drawing.Point(12, 17);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(50, 13);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "Type";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblLogEntryStatus
+            // 
+            this.lblLogEntryStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLogEntryStatus.Location = new System.Drawing.Point(68, 36);
+            this.lblLogEntryStatus.Name = "lblLogEntryStatus";
+            this.lblLogEntryStatus.Size = new System.Drawing.Size(94, 15);
+            this.lblLogEntryStatus.TabIndex = 1;
+            this.lblLogEntryStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLogEntryType
+            // 
+            this.lblLogEntryType.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLogEntryType.Location = new System.Drawing.Point(68, 16);
+            this.lblLogEntryType.Name = "lblLogEntryType";
+            this.lblLogEntryType.Size = new System.Drawing.Size(94, 15);
+            this.lblLogEntryType.TabIndex = 0;
+            this.lblLogEntryType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 381);
+            this.ClientSize = new System.Drawing.Size(561, 550);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.lblTransactionCount);
+            this.Controls.Add(this.btnMakeGroupTransaction);
             this.Controls.Add(this.btnMakeTransaction);
             this.Controls.Add(this.gbAccountToProperties);
             this.Controls.Add(this.gbCreateTransactionAccount);
@@ -830,6 +976,8 @@
             this.gbCreateTransactionAccount.PerformLayout();
             this.gbAccountToProperties.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -904,6 +1052,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnMakeGroupTransaction;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblTransactionCount;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblLogEntryCurrnecyAmountCurrency;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblLogEntryCurrencyAmountAmount;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblLogEntryStatus;
+        private System.Windows.Forms.Label lblLogEntryType;
     }
 }
 

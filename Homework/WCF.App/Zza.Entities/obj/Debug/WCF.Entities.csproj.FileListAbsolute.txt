@@ -8,3 +8,8 @@ C:\Users\Laptopo\Desktop\WCF.App\Zza.Entities\bin\Debug\Zza.Entities.pdb
 C:\Users\Laptopo\Desktop\WCF.App\Zza.Entities\obj\Debug\WCF.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Laptopo\Desktop\WCF.App\Zza.Entities\obj\Debug\Zza.Entities.dll
 C:\Users\Laptopo\Desktop\WCF.App\Zza.Entities\obj\Debug\Zza.Entities.pdb
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Entities\bin\Debug\Zza.Entities.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Entities\bin\Debug\Zza.Entities.pdb
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Entities\obj\Debug\WCF.Entities.csprojResolveAssemblyReference.cache
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Entities\obj\Debug\Zza.Entities.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Entities\obj\Debug\Zza.Entities.pdb

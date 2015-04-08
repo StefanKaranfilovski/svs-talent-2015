@@ -8,3 +8,8 @@ C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainM
 C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.csprojResolveAssemblyReference.cache
 C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.dll
 C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.pdb
+C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.csprojResolveAssemblyReference.cache
+C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.dll
+C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.pdb
+C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.dll
+C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.pdb

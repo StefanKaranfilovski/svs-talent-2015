@@ -22,3 +22,15 @@ C:\Users\Laptopo\Desktop\WCF.App\Zza.Data\bin\Debug\EntityFramework.SqlServer.xm
 C:\Users\Laptopo\Desktop\WCF.App\Zza.Data\obj\Debug\WCF.Data.csprojResolveAssemblyReference.cache
 C:\Users\Laptopo\Desktop\WCF.App\Zza.Data\obj\Debug\Zza.Data.dll
 C:\Users\Laptopo\Desktop\WCF.App\Zza.Data\obj\Debug\Zza.Data.pdb
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\Zza.Data.dll.config
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\Zza.Data.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\Zza.Data.pdb
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\EntityFramework.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\Zza.Entities.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\Zza.Entities.pdb
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\EntityFramework.xml
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\obj\Debug\WCF.Data.csprojResolveAssemblyReference.cache
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\obj\Debug\Zza.Data.dll
+C:\Users\code\Documents\StefanSeavus\Homework\WCF.App\Zza.Data\obj\Debug\Zza.Data.pdb

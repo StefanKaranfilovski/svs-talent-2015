@@ -42,19 +42,17 @@ namespace DomainModel.WindowsFormsApplication
 
         private void btnMakeTransaction_Click(object sender, EventArgs e)
         {
-            //TODO Check method implementation
             ITransactionAccount transactonAccount = CreateTransactionAccount();
             IDepositAccount depositAccount = CreateDepositAccount();
             ILoanAccount loanAccount = CreateLoanAccount();
             CurrencyAmount ca = new CurrencyAmount();
-            ca.Amount = 20000;
+            ca.Amount = 26005;
             ca.Currency = "MKD";
 
-            ITransactionProcessor transactionProcessor = new TransactionProcessor();
+            ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
             transactionProcessor.ProcessTransaction(TransactionType.Transfer, ca, transactonAccount, depositAccount);
 
-            PopulateTransactionAccountProperties(transactonAccount);
-            PopulateDepositAccountProperties(depositAccount);
+            DisplayLastTransactionDetails();
         }
 
         #endregion
@@ -219,5 +217,37 @@ namespace DomainModel.WindowsFormsApplication
         }
 
         #endregion
+
+        private void btnMakeGroupTransaction_Click(object sender, EventArgs e)
+        {
+            IAccount[] accounts = new IAccount[2];
+            IDepositAccount depositAccount = CreateDepositAccount();
+            ILoanAccount loanAccount = CreateLoanAccount();
+            CurrencyAmount  amount = new CurrencyAmount { Amount = 12345, Currency="MKD" };
+
+            accounts[0] = depositAccount;
+            accounts[1] = loanAccount;
+
+            ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
+            transactionProcessor.ProcessGroupTransaction(TransactionType.Debit, amount, accounts);
+            DisplayLastTransactionDetails();
+        }
+
+        private void DisplayLastTransactionDetails()
+        {
+            ITransactionProcessor processor = TransactionProcessor.GetTransactionProcessor();
+            TransactionLogEntry lastEntry = processor[processor.TransactionCount -1];
+
+            lblLogEntryType.Text = lastEntry.TransactionType.ToString();
+            lblLogEntryStatus.Text = lastEntry.Status.ToString();
+            lblLogEntryCurrencyAmountAmount.Text = lastEntry.Amount.Amount.ToString();
+            lblLogEntryCurrnecyAmountCurrency.Text = lastEntry.Amount.Currency.ToString();
+
+            lblTransactionCount.Text = processor.TransactionCount.ToString();
+
+            IAccount[] accounts = lastEntry.Accounts;
+            PopulateTransactionAccountProperties(accounts[0]);
+            PopulateDepositAccountProperties((IDepositAccount)accounts[1]);
+        }
     }
 }

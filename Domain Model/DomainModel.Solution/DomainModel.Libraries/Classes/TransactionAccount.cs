@@ -54,8 +54,7 @@ namespace DomainModel.Libraries.Classes
 
         protected override string GenerateAccountNumber()
         {
-            Type type = GetType();
-            string number = AccountHelper.GenerateAccountNumber(type, this.ID);
+            string number = AccountHelper.GenerateAccountNumber<ITransactionAccount>(this.ID);
             return number;
         }
 
