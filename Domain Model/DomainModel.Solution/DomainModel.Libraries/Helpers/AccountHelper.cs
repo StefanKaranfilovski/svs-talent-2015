@@ -45,17 +45,16 @@ namespace DomainModel.Libraries.Helpers
             return accountNumber;
         }
 
-        public static string GenerateAccountNumber<T>(long accountId) where T :IAccount
+        public static string GenerateAccountNumber<T>(long accountId) where T : IAccount
         {
-            Type type = typeof(T);
-            return GenerateAccountNumber(type, accountId);
+            return GenerateAccountNumber(typeof(T), accountId);
         }
 
         public static void LogTransaction(IAccount account, TransactionType transactionType, CurrencyAmount amount)
         {
             if(amount.Amount > 20000 && amount.Currency == "MKD")
             {
-                Debug.WriteLine("Number:{0}\n Transaction type:{1}\n Amount:{2}\n Currency:{3}\n", account.Number, transactionType, amount.Amount, amount.Currency);
+                Debug.WriteLine("Number:{0} \nTransaction type:{1} \nAmount:{2} \nCurrency:{3}", account.Number, transactionType, amount.Amount, amount.Currency);
             }
         }
 

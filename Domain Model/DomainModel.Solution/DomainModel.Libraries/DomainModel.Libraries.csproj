@@ -40,13 +40,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\AccountMetadataAttribute.cs" />
+    <Compile Include="Classes\CurrencyMismatchException.cs" />
     <Compile Include="Classes\DepositAccount.cs" />
     <Compile Include="Classes\LoanAccount.cs" />
     <Compile Include="Classes\TransactionAccount.cs" />
-    <Compile Include="Delegates\Delegates.cs" />
+    <Compile Include="Enumerations\CreateAccountType.cs" />
+    <Compile Include="Events and Delegates\Delegates.cs" />
     <Compile Include="Enumerations\TransactionStatus.cs" />
     <Compile Include="Enumerations\TransactionType.cs" />
     <Compile Include="Enumerations\UnitOfTime.cs" />
+    <Compile Include="Extension Methods\ProcessorExtensions.cs" />
     <Compile Include="Helpers\AccountHelper.cs" />
     <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Interfaces\IDepositAccount.cs" />

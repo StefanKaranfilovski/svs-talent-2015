@@ -4,7 +4,10 @@ using DomainModel.Libraries.Interfaces;
 using DomainModel.Libraries.Processors;
 using DomainModel.Libraries.Structures;
 using DomainModel.WindowsFormsApplication.Extension_Metods;
+using DomainModel.Libraries.Extension_Methods;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace DomainModel.WindowsFormsApplication
@@ -46,11 +49,34 @@ namespace DomainModel.WindowsFormsApplication
             IDepositAccount depositAccount = CreateDepositAccount();
             ILoanAccount loanAccount = CreateLoanAccount();
             CurrencyAmount ca = new CurrencyAmount();
-            ca.Amount = 26005;
-            ca.Currency = "MKD";
+            ca.Amount = txtTransactionDetailsAmount.MakeDecimal();
+            ca.Currency = txtTransactionDetailsCurrency.MakeString();
 
             ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
-            transactionProcessor.ProcessTransaction(TransactionType.Transfer, ca, transactonAccount, depositAccount);
+
+            bool _errorOccured = false;
+            string _errorMsg = "No error";
+
+            try
+            {
+                transactionProcessor.ProcessTransaction(TransactionType.Transfer, ca, transactonAccount, depositAccount);
+            }
+            catch (CurrencyMismatchException ex) 
+            {
+                _errorOccured = true;
+                _errorMsg = ex.Message;
+            }
+            catch (ApplicationException) 
+            {
+                throw; 
+            }
+            finally 
+            {
+                if (_errorOccured) 
+                {
+                    MessageBox.Show(_errorMsg);
+                }
+            }
 
             DisplayLastTransactionDetails();
         }
@@ -220,13 +246,19 @@ namespace DomainModel.WindowsFormsApplication
 
         private void btnMakeGroupTransaction_Click(object sender, EventArgs e)
         {
+            //CreateAccountType types = CreateAccountType.TransactionAccount;
+            //CreateAccounts(types);
             IAccount[] accounts = new IAccount[2];
-            IDepositAccount depositAccount = CreateDepositAccount();
-            ILoanAccount loanAccount = CreateLoanAccount();
-            CurrencyAmount  amount = new CurrencyAmount { Amount = 12345, Currency="MKD" };
 
-            accounts[0] = depositAccount;
-            accounts[1] = loanAccount;
+            CreateAccountType types = CreateAccountType.DepositAccount | CreateAccountType.LoanAccount;
+            Dictionary<CreateAccountType, IAccount> accountsFromDictionary = CreateAccounts(types);
+
+            //IDepositAccount depositAccount = CreateDepositAccount();
+            //ILoanAccount loanAccount = CreateLoanAccount();
+            CurrencyAmount amount = new CurrencyAmount { Amount = 12345, Currency="MKD" };
+
+            accounts[0] = accountsFromDictionary[CreateAccountType.DepositAccount];
+            accounts[1] = accountsFromDictionary[CreateAccountType.LoanAccount];
 
             ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
             transactionProcessor.ProcessGroupTransaction(TransactionType.Debit, amount, accounts);
@@ -248,6 +280,47 @@ namespace DomainModel.WindowsFormsApplication
             IAccount[] accounts = lastEntry.Accounts;
             PopulateTransactionAccountProperties(accounts[0]);
             PopulateDepositAccountProperties((IDepositAccount)accounts[1]);
+        }
+
+        //TODO What is the second parameter used for?
+        private Dictionary<CreateAccountType, IAccount> CreateAccounts(CreateAccountType typesToCreate) 
+        {
+            var createAccounts = new Dictionary<CreateAccountType, IAccount>();
+
+            if (typesToCreate.HasFlag(CreateAccountType.TransactionAccount)) 
+            {
+                ITransactionAccount newTransactionAccount = CreateTransactionAccount();
+                createAccounts.Add(CreateAccountType.TransactionAccount, newTransactionAccount);
+            }
+            if (typesToCreate.HasFlag(CreateAccountType.DepositAccount)) 
+            {
+                IDepositAccount newDepositAccount = CreateDepositAccount();
+                createAccounts.Add(CreateAccountType.DepositAccount, newDepositAccount);
+            }
+            if(typesToCreate.HasFlag(CreateAccountType.LoanAccount))
+            {
+                ILoanAccount newLoanAccount = CreateLoanAccount();
+                createAccounts.Add(CreateAccountType.LoanAccount, newLoanAccount);
+            }
+            return createAccounts;
+        }
+
+        //TODO Check the method implementation
+        private void btnChargeFee_Click(object sender, EventArgs e)
+        {
+            IAccount[] accounts = new IAccount[2];
+
+            CreateAccountType types = CreateAccountType.DepositAccount | CreateAccountType.LoanAccount;
+            Dictionary<CreateAccountType, IAccount> accountsFromDictionary = CreateAccounts(types);
+
+            CurrencyAmount  amount = new CurrencyAmount { Amount = 15, Currency="MKD" };
+
+            accounts[0] = accountsFromDictionary[CreateAccountType.DepositAccount];
+            accounts[1] = accountsFromDictionary[CreateAccountType.LoanAccount];
+
+            ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
+            transactionProcessor.ChargeProcessingFee(amount, accounts);
+            DisplayLastTransactionDetails();
         }
     }
 }

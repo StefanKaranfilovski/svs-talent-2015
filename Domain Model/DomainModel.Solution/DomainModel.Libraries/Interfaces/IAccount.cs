@@ -19,6 +19,12 @@ namespace DomainModel.Libraries.Interfaces
 
         #endregion
 
+        #region Events
+
+        event BalanceChanged OnBalanceChanged;
+
+        #endregion
+
         #region Methods
 
         TransactionStatus DebitAmount(CurrencyAmount amount);

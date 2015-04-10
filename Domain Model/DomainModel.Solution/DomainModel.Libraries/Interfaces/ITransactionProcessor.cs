@@ -22,14 +22,11 @@ namespace DomainModel.Libraries.Interfaces
 
         #region Methods
 
-        TransactionStatus ProcessTransaction(TransactionType transactionType, 
-                                             CurrencyAmount amount, 
-                                             IAccount accountFrom, 
-                                             IAccount accountTo);
+        TransactionStatus ProcessTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount accountFrom, IAccount accountTo);
 
-        TransactionStatus ProcessGroupTransaction(TransactionType transactionType,
-                                                  CurrencyAmount amount,
-                                                  IAccount[] accounts);
+        TransactionStatus ProcessGroupTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount[] accounts);
+
+        TransactionStatus ChargeProcessingFee(CurrencyAmount amount, IEnumerable<IAccount> accounts);
 
         #endregion
     }

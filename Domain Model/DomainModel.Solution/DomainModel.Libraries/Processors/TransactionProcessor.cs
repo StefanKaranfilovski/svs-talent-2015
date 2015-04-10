@@ -37,12 +37,7 @@ namespace DomainModel.Libraries.Processors
             }
         }
 
-        public TransactionLogger ExternalLogger
-        {
-            get;
-
-            set;
-        }
+        public TransactionLogger ExternalLogger { get; set; }
 
         private void CallExternalLogger(IAccount account, TransactionType transactionType, CurrencyAmount amount)
         {
@@ -80,6 +75,8 @@ namespace DomainModel.Libraries.Processors
             return instance;
         }
 
+        #region Methods
+
         private void LogTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount[] accounts, TransactionStatus transactionStatus)
         {
             TransactionLogEntry log = new TransactionLogEntry();
@@ -103,7 +100,7 @@ namespace DomainModel.Libraries.Processors
                 }
                 status = TransactionStatus.Completed;
             }
-            if (transactionType == TransactionType.Debit)
+            else if (transactionType == TransactionType.Debit)
             {
                 foreach (IAccount account in accounts)
                 {
@@ -131,8 +128,8 @@ namespace DomainModel.Libraries.Processors
             {
                 case TransactionType.Transfer:
                     accountFrom.DebitAmount(amount);
-                    accountTo.CreditAmount(amount);
                     CallExternalLogger(accountFrom, transactionType, amount);
+                    accountTo.CreditAmount(amount);
                     CallExternalLogger(accountTo, transactionType, amount);
                     status = TransactionStatus.Completed;
                     LogTransaction(transactionType, amount, accounts, status);
@@ -154,9 +151,17 @@ namespace DomainModel.Libraries.Processors
 
                 default:
                     status = TransactionStatus.NothingSelected;
-                    LogTransaction(transactionType, amount, accounts, status);
+                    LogTransaction(transactionType, amount, null, status);
                     return status;
-            }  
+            }
+        }
+
+        #endregion
+
+
+        public TransactionStatus ChargeProcessingFee(CurrencyAmount amount, IEnumerable<IAccount> accounts)
+        {
+            throw new NotImplementedException();
         }
     }
 }

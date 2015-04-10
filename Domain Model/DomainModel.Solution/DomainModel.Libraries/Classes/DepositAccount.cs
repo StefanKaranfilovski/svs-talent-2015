@@ -12,6 +12,7 @@ namespace DomainModel.Libraries.Classes
     /// <summary>
     /// Public class "DepositAccount" who inherits from "Account" base class
     /// </summary>
+    [AccountMetadata]
     public class DepositAccount : Account, IDepositAccount
     {
         #region Fields and Properties

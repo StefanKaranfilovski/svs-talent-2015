@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace DomainModel.Libraries.Classes
 {
+    [AccountMetadata]
     public sealed class LoanAccount : DepositAccount, ILoanAccount
     {
         #region Constructors

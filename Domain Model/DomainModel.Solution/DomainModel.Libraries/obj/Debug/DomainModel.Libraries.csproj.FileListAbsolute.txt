@@ -13,3 +13,8 @@ C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainMod
 C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.pdb
 C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.dll
 C:\Users\code\Documents\StefanSeavus\Domain Model\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.Libraries\bin\Debug\DomainModel.Libraries.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.csprojResolveAssemblyReference.cache
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.Libraries\obj\Debug\DomainModel.Libraries.pdb

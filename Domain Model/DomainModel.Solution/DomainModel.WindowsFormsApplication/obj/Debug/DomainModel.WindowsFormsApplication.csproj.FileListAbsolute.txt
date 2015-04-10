@@ -20,3 +20,14 @@ C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainM
 C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.frmMain.resources
 C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.Properties.Resources.resources
 C:\Users\code\Documents\Visual Studio 2015\Projects\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.csproj.GenerateResource.Cache
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\bin\Debug\DomainModel.WindowsFormsApplication.exe.config
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.exe
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\bin\Debug\DomainModel.WindowsFormsApplication.exe
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\bin\Debug\DomainModel.WindowsFormsApplication.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\bin\Debug\DomainModel.Libraries.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\bin\Debug\DomainModel.Libraries.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.csprojResolveAssemblyReference.cache
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.frmMain.resources
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.Properties.Resources.resources
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Domain Model\DomainModel.Solution\DomainModel.WindowsFormsApplication\obj\Debug\DomainModel.WindowsFormsApplication.csproj.GenerateResource.Cache

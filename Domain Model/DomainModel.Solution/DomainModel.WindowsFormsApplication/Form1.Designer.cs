@@ -109,6 +109,12 @@
             this.label27 = new System.Windows.Forms.Label();
             this.lblLogEntryStatus = new System.Windows.Forms.Label();
             this.lblLogEntryType = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtTransactionDetailsAmount = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtTransactionDetailsCurrency = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btnChargeFee = new System.Windows.Forms.Button();
             this.gbCreateDepositAccount.SuspendLayout();
             this.gbInterestRateDepositAccount.SuspendLayout();
             this.gbTimePeriodDepositAccount.SuspendLayout();
@@ -124,6 +130,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
@@ -692,7 +699,7 @@
             this.gbAccountToProperties.Controls.Add(this.label8);
             this.gbAccountToProperties.Controls.Add(this.lblAccountToPropertiesNumber);
             this.gbAccountToProperties.Controls.Add(this.lblAccountToPropertiesID);
-            this.gbAccountToProperties.Location = new System.Drawing.Point(377, 218);
+            this.gbAccountToProperties.Location = new System.Drawing.Point(377, 321);
             this.gbAccountToProperties.Name = "gbAccountToProperties";
             this.gbAccountToProperties.Size = new System.Drawing.Size(172, 142);
             this.gbAccountToProperties.TabIndex = 11;
@@ -804,9 +811,9 @@
             // 
             // btnMakeTransaction
             // 
-            this.btnMakeTransaction.Location = new System.Drawing.Point(377, 160);
+            this.btnMakeTransaction.Location = new System.Drawing.Point(6, 67);
             this.btnMakeTransaction.Name = "btnMakeTransaction";
-            this.btnMakeTransaction.Size = new System.Drawing.Size(172, 23);
+            this.btnMakeTransaction.Size = new System.Drawing.Size(156, 23);
             this.btnMakeTransaction.TabIndex = 12;
             this.btnMakeTransaction.Text = "Make Transaction";
             this.btnMakeTransaction.UseVisualStyleBackColor = true;
@@ -814,7 +821,7 @@
             // 
             // btnMakeGroupTransaction
             // 
-            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(377, 189);
+            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(377, 292);
             this.btnMakeGroupTransaction.Name = "btnMakeGroupTransaction";
             this.btnMakeGroupTransaction.Size = new System.Drawing.Size(172, 23);
             this.btnMakeGroupTransaction.TabIndex = 13;
@@ -939,16 +946,79 @@
             this.lblLogEntryType.TabIndex = 0;
             this.lblLogEntryType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txtTransactionDetailsAmount);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.txtTransactionDetailsCurrency);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.btnMakeTransaction);
+            this.groupBox5.Location = new System.Drawing.Point(377, 160);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(172, 97);
+            this.groupBox5.TabIndex = 20;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Enter transaction details";
+            // 
+            // txtTransactionDetailsAmount
+            // 
+            this.txtTransactionDetailsAmount.Location = new System.Drawing.Point(12, 17);
+            this.txtTransactionDetailsAmount.Name = "txtTransactionDetailsAmount";
+            this.txtTransactionDetailsAmount.Size = new System.Drawing.Size(94, 20);
+            this.txtTransactionDetailsAmount.TabIndex = 3;
+            this.txtTransactionDetailsAmount.Text = "10000";
+            this.txtTransactionDetailsAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(112, 20);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 13);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Amount";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTransactionDetailsCurrency
+            // 
+            this.txtTransactionDetailsCurrency.Location = new System.Drawing.Point(12, 41);
+            this.txtTransactionDetailsCurrency.Name = "txtTransactionDetailsCurrency";
+            this.txtTransactionDetailsCurrency.Size = new System.Drawing.Size(94, 20);
+            this.txtTransactionDetailsCurrency.TabIndex = 2;
+            this.txtTransactionDetailsCurrency.Text = "MKD";
+            this.txtTransactionDetailsCurrency.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(112, 44);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(49, 13);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Currency";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnChargeFee
+            // 
+            this.btnChargeFee.Location = new System.Drawing.Point(377, 263);
+            this.btnChargeFee.Name = "btnChargeFee";
+            this.btnChargeFee.Size = new System.Drawing.Size(172, 23);
+            this.btnChargeFee.TabIndex = 21;
+            this.btnChargeFee.Text = "Charge Fee";
+            this.btnChargeFee.UseVisualStyleBackColor = true;
+            this.btnChargeFee.Click += new System.EventHandler(this.btnChargeFee_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 550);
+            this.Controls.Add(this.btnChargeFee);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.lblTransactionCount);
             this.Controls.Add(this.btnMakeGroupTransaction);
-            this.Controls.Add(this.btnMakeTransaction);
             this.Controls.Add(this.gbAccountToProperties);
             this.Controls.Add(this.gbCreateTransactionAccount);
             this.Controls.Add(this.gbDepositAccountProperties);
@@ -978,6 +1048,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1065,6 +1137,12 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblLogEntryStatus;
         private System.Windows.Forms.Label lblLogEntryType;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtTransactionDetailsAmount;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtTransactionDetailsCurrency;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btnChargeFee;
     }
 }
 
