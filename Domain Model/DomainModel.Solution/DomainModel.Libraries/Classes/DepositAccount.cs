@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DomainModel.Libraries.Classes
 {
     /// <summary>
-    /// Public class "DepositAccount" who inherits from "Account" base class
+    /// Public class "DepositAccount" who inherits from "Account" base class and has the AccountMetadata attribute
     /// </summary>
     [AccountMetadata]
     public class DepositAccount : Account, IDepositAccount
@@ -118,6 +118,10 @@ namespace DomainModel.Libraries.Classes
 
         #region Methods
 
+        /// <summary>
+        /// GenerateAccountNumber() override that generates Account number using the GenerateAccountNumber() generic method
+        /// </summary>
+        /// <returns>string</returns>
         protected override string GenerateAccountNumber()
         {
             string number = AccountHelper.GenerateAccountNumber<IDepositAccount>(this.ID);

@@ -53,6 +53,10 @@ namespace DomainModel.Libraries.Classes
 
         #region Methods
 
+        /// <summary>
+        /// GenerateAccountNumber() override that generates Account number using the GenerateAccountNumber() generic method
+        /// </summary>
+        /// <returns>string</returns>
         protected override string GenerateAccountNumber()
         {
             string number = AccountHelper.GenerateAccountNumber<ITransactionAccount>(this.ID);

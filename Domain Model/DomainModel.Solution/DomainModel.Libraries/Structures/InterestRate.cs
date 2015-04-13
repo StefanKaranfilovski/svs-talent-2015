@@ -15,21 +15,17 @@ namespace DomainModel.Libraries.Structures
         #region Fields and Properties
 
         /// <summary>
-        /// Public decimal "Percent" field
+        /// Each property has a backing private field
         /// </summary>
+        
         private decimal percent;
-
         public decimal Percent 
         {
             get { return percent; }
             set { percent = value; }
         }
 
-        /// <summary>
-        /// Public UnitOfTime "Unit" field
-        /// </summary>
         private UnitOfTime unit;
-
         public UnitOfTime Unit 
         {
             get { return unit; }

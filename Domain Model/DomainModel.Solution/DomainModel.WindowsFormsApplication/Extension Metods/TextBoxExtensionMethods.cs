@@ -9,6 +9,10 @@ namespace DomainModel.WindowsFormsApplication.Extension_Metods
 {
     public static class TextBoxExtensionMethods
     {
+        /// <summary>
+        /// TextBox control extension methods that convert the control text into string, int32 and decimal respectfully
+        /// </summary>
+
         public static string MakeString(this TextBox textBox) 
         {
             string stringValue = Convert.ToString(textBox.Text);

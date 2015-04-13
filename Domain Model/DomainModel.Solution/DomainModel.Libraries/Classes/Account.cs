@@ -20,6 +20,17 @@ namespace DomainModel.Libraries.Classes
 
         public event BalanceChanged OnBalanceChanged;
 
+        /// <summary>
+        /// Event handler for the OnBalanceChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //TODO Where to put the handler
+        private void onBalanceChanged(object sender, BalanceChangedEventArguments e)
+        {
+            Debug.WriteLine("{0} \n{1} \n{2}", e.Account.ID, e.Account.Number, e.Change.Amount);
+        }
+
         #region Fields and Properties
 
         /// <summary>
@@ -39,6 +50,7 @@ namespace DomainModel.Libraries.Classes
 
         /// <summary>
         /// Private string "number" field
+        /// Has FormatRestriction attribute
         /// </summary>
         [FormatRestriction(MaxLength=16, FormatString="XXXX-XXXX-XXXX-XXXX")]
         private string number;
@@ -76,6 +88,7 @@ namespace DomainModel.Libraries.Classes
         /// <summary>
         /// Public CurrencyAmount "Balance" property for the "balance" field
         /// Public getter and private setter
+        /// In the setter checks if the amount and currency of the new and the old value are the same, if not throws an exeption
         /// </summary>
         public CurrencyAmount Balance
         {
@@ -132,11 +145,10 @@ namespace DomainModel.Libraries.Classes
         #region Public methods
 
         /// <summary>
-        /// Public method "DebitAmount" which returns TransactionStatus and takes one parametar of type CurrencyAmount
-        /// 
+        /// It checks the currency with CheckAmountCurrency(), if they are the same it reduses the Amount
         /// </summary>
-        /// <param name="amount"></param>
-        /// <returns></returns>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <returns>TransactionStatus</returns>
         public virtual TransactionStatus DebitAmount(CurrencyAmount amount)
         {
             if (CheckAmountCurrency(amount) == TransactionStatus.InProcess)
@@ -153,10 +165,10 @@ namespace DomainModel.Libraries.Classes
         }
 
         /// <summary>
-        /// Public method CreditAmount which returns TransactionStatus and takes one parameter of type CurrencyAmount
+        /// It checks the currency with CheckAmountCurrency(), if they are the same it increases the Amount
         /// </summary>
-        /// <param name="amount"></param>
-        /// <returns></returns>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <returns>TransactionStatus</returns>
         public virtual TransactionStatus CreditAmount(CurrencyAmount amount)
         {
             if (CheckAmountCurrency(amount) == TransactionStatus.InProcess)
@@ -176,17 +188,11 @@ namespace DomainModel.Libraries.Classes
 
         #region Private methods
 
-        //TODO Where to put the OnBalanceChangedHandler
-        private void onBalanceChanged(object sender, BalanceChangedEventArguments e)
-        {
-            Debug.WriteLine("{0} \n{1} \n{2}", e.Account.ID, e.Account.Number, e.Change.Amount);
-        }
-
         /// <summary>
-        /// Private method "checkAmountCurrency" which returns TransactionStatus and takes one parameter of type CurrencyAmount
+        /// Checks the currency of the old and the new value, if they are different it throws an exeption
         /// </summary>
-        /// <param name="amount"></param>
-        /// <returns></returns>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <returns>TransactionStatus</returns>
         private TransactionStatus CheckAmountCurrency(CurrencyAmount amount)
         {
             if (this.Currency != amount.Currency)

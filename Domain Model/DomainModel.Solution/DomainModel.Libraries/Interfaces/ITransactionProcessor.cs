@@ -12,6 +12,8 @@ namespace DomainModel.Libraries.Interfaces
 {
     public interface ITransactionProcessor
     {
+        #region Fields and Properties
+
         TransactionLogger ExternalLogger { get; set; }
 
         TransactionLogEntry LastTransaction { get; }
@@ -19,6 +21,8 @@ namespace DomainModel.Libraries.Interfaces
         int TransactionCount { get; }
 
         TransactionLogEntry this[int i] { get; }
+
+        #endregion
 
         #region Methods
 

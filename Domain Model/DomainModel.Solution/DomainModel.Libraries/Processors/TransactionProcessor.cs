@@ -11,11 +11,20 @@ using System.Threading.Tasks;
 
 namespace DomainModel.Libraries.Processors
 {
+    /// <summary>
+    /// Implements ITransactionProcessor interface
+    /// </summary>
     public class TransactionProcessor : ITransactionProcessor
     {
+        #region Field and Properties
+
         private IList<TransactionLogEntry> transactionLog;
 
         private TransactionLogEntry lastTransaction;
+
+        /// <summary>
+        /// Returns the last transaction in the transactionLog list, if the list is empty returns null
+        /// </summary>
         public TransactionLogEntry LastTransaction
         {
             get
@@ -29,6 +38,9 @@ namespace DomainModel.Libraries.Processors
             }
         }
 
+        /// <summary>
+        /// Returns the number of transactions, counts the elements in the transactionLog list
+        /// </summary>
         public int TransactionCount
         {
             get
@@ -37,13 +49,16 @@ namespace DomainModel.Libraries.Processors
             }
         }
 
+        /// <summary>
+        /// Auto-implemented property of TransactionLogger delegate type
+        /// </summary>
         public TransactionLogger ExternalLogger { get; set; }
 
-        private void CallExternalLogger(IAccount account, TransactionType transactionType, CurrencyAmount amount)
-        {
-            ExternalLogger(account, transactionType, amount);
-        }
-
+        /// <summary>
+        /// This indexer is used for getting the last transaction in the transactionLog list
+        /// </summary>
+        /// <param type=int name="i"></param>
+        /// <returns>TransactionLogEntry</returns>
         public TransactionLogEntry this[int i]
         {
             get
@@ -56,8 +71,18 @@ namespace DomainModel.Libraries.Processors
             }
         }
 
+        #endregion
+
+        #region Singleton pattern
+
+        /// <summary>
+        /// This field will hold the only instance of TransactionProcessor
+        /// </summary>
         private static readonly TransactionProcessor instance;
 
+        /// <summary>
+        /// The default constructor needs to be private so we cant call it manualy
+        /// </summary>
         private TransactionProcessor()
         {
             transactionLog = new List<TransactionLogEntry>();
@@ -65,18 +90,56 @@ namespace DomainModel.Libraries.Processors
             ExternalLogger += AccountHelper.NotifyNationalBank;
         }
 
+        /// <summary>
+        /// The default static constructor initializes the TransactionProcessor instance and is called only once
+        /// </summary>
         static TransactionProcessor()
         {
             instance = new TransactionProcessor();
         }
 
+        /// <summary>
+        /// We use this method to get the instance of TransactionProcessor
+        /// </summary>
+        /// <returns>TransactionProcessor</returns>
         public static TransactionProcessor GetTransactionProcessor()
         {
             return instance;
         }
 
+        #endregion
+
         #region Methods
 
+        /// <summary>
+        /// Passes the parameters to the ExternalLogger delegate property
+        /// </summary>
+        /// <param type=IAccount name="account"></param>
+        /// <param type=TransactionType name="transactionType"></param>
+        /// <param type=CurrencyAmount name="amount"></param>
+        private void CallExternalLogger(IAccount account, TransactionType transactionType, CurrencyAmount amount)
+        {
+            ExternalLogger(account, transactionType, amount);
+        }
+
+        /// <summary>
+        /// Overrides the extension method and throws NotImplementedExeption
+        /// </summary>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <param type=IEnumerable<IAccount> name="accounts"></param>
+        /// <returns></returns>
+        public TransactionStatus ChargeProcessingFee(CurrencyAmount amount, IEnumerable<IAccount> accounts)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates new TransactionLogEntry and puts it in the transactionLog list
+        /// </summary>
+        /// <param type=TransactionType name="transactionType"></param>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <param type=IAccount[] name="accounts"></param>
+        /// <param type=TransactionStatus name="transactionStatus"></param>
         private void LogTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount[] accounts, TransactionStatus transactionStatus)
         {
             TransactionLogEntry log = new TransactionLogEntry();
@@ -88,6 +151,13 @@ namespace DomainModel.Libraries.Processors
             transactionLog.Add(log);
         }
 
+        /// <summary>
+        /// Executes multiple transaction and executes the appropriate action depending on the transaction type
+        /// </summary>
+        /// <param type=TransactionType name="transactionType"></param>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <param type=IAccount[] name="accounts"></param>
+        /// <returns>TransactionStatus</returns>
         public TransactionStatus ProcessGroupTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount[] accounts)
         {
             TransactionStatus status = new TransactionStatus();
@@ -96,6 +166,7 @@ namespace DomainModel.Libraries.Processors
                 foreach (IAccount account in accounts)
                 {
                     account.CreditAmount(amount);
+                    //Calls the delegate foreach action
                     CallExternalLogger(account, transactionType, amount);
                 }
                 status = TransactionStatus.Completed;
@@ -113,10 +184,19 @@ namespace DomainModel.Libraries.Processors
             {
                 status = TransactionStatus.Failed;
             }
+            //Logs the transaction
             LogTransaction(transactionType, amount, accounts, status);
             return status;
         }
 
+        /// <summary>
+        /// Makes a single transaction from one account to another, and according to the type of transaction executes the appropriate operation
+        /// </summary>
+        /// <param type=TransactionType name="transactionType"></param>
+        /// <param type=CurrencyAmount name="amount"></param>
+        /// <param type=IAccount name="accountFrom"></param>
+        /// <param type=IAccount name="accountTo"></param>
+        /// <returns>TransactionStatus</returns>
         public TransactionStatus ProcessTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount accountFrom, IAccount accountTo)
         {
             TransactionStatus status = new TransactionStatus();
@@ -128,10 +208,12 @@ namespace DomainModel.Libraries.Processors
             {
                 case TransactionType.Transfer:
                     accountFrom.DebitAmount(amount);
+                    //Calls the delegate foreach action
                     CallExternalLogger(accountFrom, transactionType, amount);
                     accountTo.CreditAmount(amount);
                     CallExternalLogger(accountTo, transactionType, amount);
                     status = TransactionStatus.Completed;
+                    //Log the transaction
                     LogTransaction(transactionType, amount, accounts, status);
                     return status;
 
@@ -157,11 +239,5 @@ namespace DomainModel.Libraries.Processors
         }
 
         #endregion
-
-
-        public TransactionStatus ChargeProcessingFee(CurrencyAmount amount, IEnumerable<IAccount> accounts)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

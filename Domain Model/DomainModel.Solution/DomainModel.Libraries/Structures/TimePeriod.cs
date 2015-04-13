@@ -15,21 +15,17 @@ namespace DomainModel.Libraries.Structures
         #region Fields and Properties
 
         /// <summary>
-        /// Public int "Period" field
+        /// Each property has a backing private field
         /// </summary>
+        /// 
         private int period;
-
         public int Period 
         {
             get { return period; }
             set { period = value; }
         }
 
-        /// <summary>
-        /// Public UnitOfTime "Unit" field
-        /// </summary>
         private UnitOfTime unit;
-
         public UnitOfTime Unit 
         {
             get { return unit; }

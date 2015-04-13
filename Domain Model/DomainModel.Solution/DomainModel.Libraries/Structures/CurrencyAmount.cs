@@ -12,23 +12,19 @@ namespace DomainModel.Libraries.Structures
     public struct CurrencyAmount
     {
         #region Fields and Properties
-
+        
         /// <summary>
-        /// Public decimal "Amount" field
+        /// Each property has a backing private field
         /// </summary>
-        private decimal amount;
 
+        private decimal amount;
         public decimal Amount 
         {
             get { return amount; }
             set { amount = value; }
         }
 
-        /// <summary>
-        /// Public decimal "Currency" field
-        /// </summary>
         private string currency;
-
         public string Currency 
         {
             get { return currency; }

@@ -12,6 +12,12 @@ namespace DomainModel.Libraries.Processors
 {
     public class TransactionLogEntry
     {
+        #region Field and Properties
+
+        /// <summary>
+        /// Each property has a backing private field
+        /// </summary>
+
         private TransactionType transactionType;
         public TransactionType TransactionType
         {
@@ -39,5 +45,7 @@ namespace DomainModel.Libraries.Processors
             get { return status; }
             set { status = value; }
         }
+
+        #endregion
     }
 }
