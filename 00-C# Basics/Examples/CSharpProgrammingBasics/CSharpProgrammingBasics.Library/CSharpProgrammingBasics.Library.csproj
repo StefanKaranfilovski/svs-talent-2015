@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5EC8BFE-C3F5-410E-B915-9E0B0F1DAE8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpProgrammingBasics.Library</RootNamespace>
+    <AssemblyName>CSharpProgrammingBasics.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\AccessModifiers\SampleAccessModifiersBaseClass.cs" />
+    <Compile Include="Samples\AccessModifiers\SampleAccessModifiersInherited.cs" />
+    <Compile Include="Samples\AccessModifiers\SampleAccessModifiersNonIherited.cs" />
+    <Compile Include="Samples\Anonymous\Anonymous.cs" />
+    <Compile Include="Samples\Anonymous\CarPainterAnonymous.cs" />
+    <Compile Include="Samples\Anonymous\CarPainterLambda.cs" />
+    <Compile Include="Samples\Attributes\VehicleMetadata.cs" />
+    <Compile Include="Samples\Delegates\DelegatesAndEvents.cs" />
+    <Compile Include="Samples\Exceptions\CarPark.cs" />
+    <Compile Include="Samples\Exceptions\CarFactory.CarPark.cs" />
+    <Compile Include="Samples\Exceptions\CarParkFullException.cs" />
+    <Compile Include="Samples\Exceptions\CatchingExceptions.cs" />
+    <Compile Include="Samples\Exceptions\CatchingMultipleExceptions.cs" />
+    <Compile Include="Samples\Exceptions\TryCatchFinally.cs" />
+    <Compile Include="Samples\Extensions\CallExtensions.cs" />
+    <Compile Include="Samples\Extensions\CarExtensions.cs" />
+    <Compile Include="Samples\Inheritance\AbstractCar.cs" />
+    <Compile Include="Samples\Inheritance\AbstractCarStatics.cs" />
+    <Compile Include="Samples\Inheritance\CombustionEngineCar.cs" />
+    <Compile Include="Samples\Inheritance\CombustionEngineCarEnglishVersion.cs" />
+    <Compile Include="Samples\Inheritance\ElectricCar.cs" />
+    <Compile Include="Samples\Initializers\CallInitializers.cs" />
+    <Compile Include="Samples\Initializers\CarDealer.cs" />
+    <Compile Include="Samples\Initializers\CarDealerRegister.cs" />
+    <Compile Include="Samples\Interfaces\ICar.cs" />
+    <Compile Include="Samples\LINQ\LinqToObjectsExample.cs" />
+    <Compile Include="Samples\Methods\SampleClass.cs" />
+    <Compile Include="Samples\Namespaces\CarAccessories.cs" />
+    <Compile Include="Samples\SampleClass.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\FordModelT.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\ICar.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\MitsubishiLancerEvo.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\Tesla.cs" />
+    <Compile Include="Samples\SOLID\ISP\Good\ICar.cs" />
+    <Compile Include="Samples\SOLID\ISP\Good\ICarWithBoardComputer.cs" />
+    <Compile Include="Samples\SOLID\ISP\Good\IRacingCar.cs" />
+    <Compile Include="Samples\SOLID\SRP\Bad\CarAlmighty.cs" />
+    <Compile Include="Samples\SOLID\SRP\Good\CarPure.cs" />
+    <Compile Include="Samples\SOLID\SRP\Good\CarUI.cs" />
+    <Compile Include="Samples\Static\CarFactory.cs" />
+    <Compile Include="Samples\Static\SpecializedCarFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

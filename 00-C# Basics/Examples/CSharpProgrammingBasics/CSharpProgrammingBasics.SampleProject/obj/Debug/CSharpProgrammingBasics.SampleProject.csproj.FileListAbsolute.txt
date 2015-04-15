@@ -1,0 +1,7 @@
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\bin\CSharpProgrammingBasics.SampleProject.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\bin\CSharpProgrammingBasics.SampleProject.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\bin\CSharpProgrammingBasics.Library.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\bin\CSharpProgrammingBasics.Library.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\obj\Debug\CSharpProgrammingBasics.SampleProject.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\obj\Debug\CSharpProgrammingBasics.SampleProject.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.SampleProject\obj\Debug\CSharpProgrammingBasics.SampleProject.csprojResolveAssemblyReference.cache

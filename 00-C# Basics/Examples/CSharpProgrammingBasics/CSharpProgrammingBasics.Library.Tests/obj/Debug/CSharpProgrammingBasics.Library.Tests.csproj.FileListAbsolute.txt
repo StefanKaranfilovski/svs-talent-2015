@@ -1,0 +1,7 @@
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\bin\Debug\CSharoProgrammingBasics.Library.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\bin\Debug\CSharoProgrammingBasics.Library.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\bin\Debug\CSharpProgrammingBasics.Library.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\bin\Debug\CSharpProgrammingBasics.Library.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\obj\Debug\CSharoProgrammingBasics.Library.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\obj\Debug\CSharoProgrammingBasics.Library.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library.Tests\obj\Debug\CSharpProgrammingBasics.Library.Tests.csprojResolveAssemblyReference.cache

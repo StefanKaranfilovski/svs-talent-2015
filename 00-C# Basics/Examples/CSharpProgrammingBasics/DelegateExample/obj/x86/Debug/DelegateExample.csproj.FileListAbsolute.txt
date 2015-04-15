@@ -1,0 +1,7 @@
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\bin\Debug\DelegateExample.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\bin\Debug\DelegateExample.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\obj\x86\Debug\DelegateExample.Properties.Resources.resources
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\obj\x86\Debug\DelegateExample.dll
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\obj\x86\Debug\DelegateExample.pdb
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\obj\x86\Debug\DelegateExample.csprojResolveAssemblyReference.cache
+C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\DelegateExample\obj\x86\Debug\DelegateExample.csproj.GenerateResource.Cache
