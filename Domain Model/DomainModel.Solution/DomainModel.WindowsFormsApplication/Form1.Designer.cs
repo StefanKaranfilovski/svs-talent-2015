@@ -115,6 +115,22 @@
             this.txtTransactionDetailsCurrency = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.btnChargeFee = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtPersonTransactionAmount = new System.Windows.Forms.TextBox();
+            this.btnCreatePerson = new System.Windows.Forms.Button();
+            this.txtPersonTransactionCurrency = new System.Windows.Forms.TextBox();
+            this.txtPersonLastName = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtPersonFirstName = new System.Windows.Forms.TextBox();
+            this.txtPersonIdNumber = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtPersonBirthDate = new System.Windows.Forms.TextBox();
+            this.lbPersonAccounts = new System.Windows.Forms.ListBox();
             this.gbCreateDepositAccount.SuspendLayout();
             this.gbInterestRateDepositAccount.SuspendLayout();
             this.gbTimePeriodDepositAccount.SuspendLayout();
@@ -131,6 +147,8 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
@@ -200,7 +218,7 @@
             this.gbCreateDepositAccount.Controls.Add(this.dtpDepositAccountStartDate);
             this.gbCreateDepositAccount.Controls.Add(this.btnCreateDepositAccount);
             this.gbCreateDepositAccount.Controls.Add(this.gbTimePeriodDepositAccount);
-            this.gbCreateDepositAccount.Location = new System.Drawing.Point(12, 118);
+            this.gbCreateDepositAccount.Location = new System.Drawing.Point(12, 243);
             this.gbCreateDepositAccount.Name = "gbCreateDepositAccount";
             this.gbCreateDepositAccount.Size = new System.Drawing.Size(181, 249);
             this.gbCreateDepositAccount.TabIndex = 6;
@@ -358,7 +376,7 @@
             this.gbAccountFromProperties.Controls.Add(this.lblAccountFromPropertiesCurrencyAmount);
             this.gbAccountFromProperties.Controls.Add(this.lblAccountFromPropertiesNumber);
             this.gbAccountFromProperties.Controls.Add(this.lblAccountFromPropertiesID);
-            this.gbAccountFromProperties.Location = new System.Drawing.Point(377, 12);
+            this.gbAccountFromProperties.Location = new System.Drawing.Point(587, 12);
             this.gbAccountFromProperties.Name = "gbAccountFromProperties";
             this.gbAccountFromProperties.Size = new System.Drawing.Size(172, 142);
             this.gbAccountFromProperties.TabIndex = 7;
@@ -471,7 +489,7 @@
             // gbTransactionAccountProperties
             // 
             this.gbTransactionAccountProperties.Controls.Add(this.groupBox1);
-            this.gbTransactionAccountProperties.Location = new System.Drawing.Point(199, 12);
+            this.gbTransactionAccountProperties.Location = new System.Drawing.Point(409, 12);
             this.gbTransactionAccountProperties.Name = "gbTransactionAccountProperties";
             this.gbTransactionAccountProperties.Size = new System.Drawing.Size(172, 79);
             this.gbTransactionAccountProperties.TabIndex = 8;
@@ -535,7 +553,7 @@
             this.gbDepositAccountProperties.Controls.Add(this.lblDepositPropertiesStartDate);
             this.gbDepositAccountProperties.Controls.Add(this.gbInterestRateDepositProperties);
             this.gbDepositAccountProperties.Controls.Add(this.gbTImePeriodDepositProperties);
-            this.gbDepositAccountProperties.Location = new System.Drawing.Point(199, 118);
+            this.gbDepositAccountProperties.Location = new System.Drawing.Point(409, 118);
             this.gbDepositAccountProperties.Name = "gbDepositAccountProperties";
             this.gbDepositAccountProperties.Size = new System.Drawing.Size(172, 180);
             this.gbDepositAccountProperties.TabIndex = 9;
@@ -683,7 +701,7 @@
             this.gbCreateTransactionAccount.Controls.Add(this.txtTransactionAccountCurrency);
             this.gbCreateTransactionAccount.Controls.Add(this.lblCurrency);
             this.gbCreateTransactionAccount.Controls.Add(this.btnCreateTransactionAccount);
-            this.gbCreateTransactionAccount.Location = new System.Drawing.Point(12, 12);
+            this.gbCreateTransactionAccount.Location = new System.Drawing.Point(199, 243);
             this.gbCreateTransactionAccount.Name = "gbCreateTransactionAccount";
             this.gbCreateTransactionAccount.Size = new System.Drawing.Size(181, 100);
             this.gbCreateTransactionAccount.TabIndex = 10;
@@ -699,7 +717,7 @@
             this.gbAccountToProperties.Controls.Add(this.label8);
             this.gbAccountToProperties.Controls.Add(this.lblAccountToPropertiesNumber);
             this.gbAccountToProperties.Controls.Add(this.lblAccountToPropertiesID);
-            this.gbAccountToProperties.Location = new System.Drawing.Point(377, 321);
+            this.gbAccountToProperties.Location = new System.Drawing.Point(587, 321);
             this.gbAccountToProperties.Name = "gbAccountToProperties";
             this.gbAccountToProperties.Size = new System.Drawing.Size(172, 142);
             this.gbAccountToProperties.TabIndex = 11;
@@ -821,7 +839,7 @@
             // 
             // btnMakeGroupTransaction
             // 
-            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(377, 292);
+            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(587, 292);
             this.btnMakeGroupTransaction.Name = "btnMakeGroupTransaction";
             this.btnMakeGroupTransaction.Size = new System.Drawing.Size(172, 23);
             this.btnMakeGroupTransaction.TabIndex = 13;
@@ -831,7 +849,7 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(202, 311);
+            this.label19.Location = new System.Drawing.Point(412, 311);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(94, 15);
             this.label19.TabIndex = 18;
@@ -841,7 +859,7 @@
             // lblTransactionCount
             // 
             this.lblTransactionCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTransactionCount.Location = new System.Drawing.Point(302, 311);
+            this.lblTransactionCount.Location = new System.Drawing.Point(512, 311);
             this.lblTransactionCount.Name = "lblTransactionCount";
             this.lblTransactionCount.Size = new System.Drawing.Size(59, 15);
             this.lblTransactionCount.TabIndex = 17;
@@ -854,7 +872,7 @@
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.lblLogEntryStatus);
             this.groupBox3.Controls.Add(this.lblLogEntryType);
-            this.groupBox3.Location = new System.Drawing.Point(199, 334);
+            this.groupBox3.Location = new System.Drawing.Point(409, 334);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(172, 116);
             this.groupBox3.TabIndex = 19;
@@ -953,7 +971,7 @@
             this.groupBox5.Controls.Add(this.txtTransactionDetailsCurrency);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.btnMakeTransaction);
-            this.groupBox5.Location = new System.Drawing.Point(377, 160);
+            this.groupBox5.Location = new System.Drawing.Point(587, 160);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(172, 97);
             this.groupBox5.TabIndex = 20;
@@ -1000,7 +1018,7 @@
             // 
             // btnChargeFee
             // 
-            this.btnChargeFee.Location = new System.Drawing.Point(377, 263);
+            this.btnChargeFee.Location = new System.Drawing.Point(587, 263);
             this.btnChargeFee.Name = "btnChargeFee";
             this.btnChargeFee.Size = new System.Drawing.Size(172, 23);
             this.btnChargeFee.TabIndex = 21;
@@ -1008,11 +1026,171 @@
             this.btnChargeFee.UseVisualStyleBackColor = true;
             this.btnChargeFee.Click += new System.EventHandler(this.btnChargeFee_Click);
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.lbPersonAccounts);
+            this.groupBox6.Controls.Add(this.txtPersonIdNumber);
+            this.groupBox6.Controls.Add(this.label28);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.txtPersonBirthDate);
+            this.groupBox6.Controls.Add(this.txtPersonLastName);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.label31);
+            this.groupBox6.Controls.Add(this.txtPersonFirstName);
+            this.groupBox6.Controls.Add(this.groupBox7);
+            this.groupBox6.Controls.Add(this.btnCreatePerson);
+            this.groupBox6.Location = new System.Drawing.Point(12, 12);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(368, 225);
+            this.groupBox6.TabIndex = 22;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Create person:";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtPersonTransactionCurrency);
+            this.groupBox7.Controls.Add(this.label24);
+            this.groupBox7.Controls.Add(this.label26);
+            this.groupBox7.Controls.Add(this.txtPersonTransactionAmount);
+            this.groupBox7.Location = new System.Drawing.Point(6, 119);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(168, 68);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Transaction account details:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(106, 44);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(49, 13);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "Currency";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(106, 20);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(43, 13);
+            this.label26.TabIndex = 6;
+            this.label26.Text = "Amount";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPersonTransactionAmount
+            // 
+            this.txtPersonTransactionAmount.Location = new System.Drawing.Point(6, 17);
+            this.txtPersonTransactionAmount.Name = "txtPersonTransactionAmount";
+            this.txtPersonTransactionAmount.ReadOnly = true;
+            this.txtPersonTransactionAmount.Size = new System.Drawing.Size(94, 20);
+            this.txtPersonTransactionAmount.TabIndex = 4;
+            // 
+            // btnCreatePerson
+            // 
+            this.btnCreatePerson.Location = new System.Drawing.Point(6, 193);
+            this.btnCreatePerson.Name = "btnCreatePerson";
+            this.btnCreatePerson.Size = new System.Drawing.Size(168, 23);
+            this.btnCreatePerson.TabIndex = 1;
+            this.btnCreatePerson.Text = "Create Person";
+            this.btnCreatePerson.UseVisualStyleBackColor = true;
+            this.btnCreatePerson.Click += new System.EventHandler(this.btnCreatePerson_Click);
+            // 
+            // txtPersonTransactionCurrency
+            // 
+            this.txtPersonTransactionCurrency.Location = new System.Drawing.Point(6, 41);
+            this.txtPersonTransactionCurrency.Name = "txtPersonTransactionCurrency";
+            this.txtPersonTransactionCurrency.ReadOnly = true;
+            this.txtPersonTransactionCurrency.Size = new System.Drawing.Size(94, 20);
+            this.txtPersonTransactionCurrency.TabIndex = 8;
+            // 
+            // txtPersonLastName
+            // 
+            this.txtPersonLastName.Location = new System.Drawing.Point(12, 43);
+            this.txtPersonLastName.Name = "txtPersonLastName";
+            this.txtPersonLastName.ReadOnly = true;
+            this.txtPersonLastName.Size = new System.Drawing.Size(94, 20);
+            this.txtPersonLastName.TabIndex = 12;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(112, 46);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(56, 13);
+            this.label30.TabIndex = 11;
+            this.label30.Text = "Last name";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(112, 22);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(55, 13);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "First name";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPersonFirstName
+            // 
+            this.txtPersonFirstName.Location = new System.Drawing.Point(12, 19);
+            this.txtPersonFirstName.Name = "txtPersonFirstName";
+            this.txtPersonFirstName.ReadOnly = true;
+            this.txtPersonFirstName.Size = new System.Drawing.Size(94, 20);
+            this.txtPersonFirstName.TabIndex = 9;
+            // 
+            // txtPersonIdNumber
+            // 
+            this.txtPersonIdNumber.Location = new System.Drawing.Point(12, 93);
+            this.txtPersonIdNumber.Name = "txtPersonIdNumber";
+            this.txtPersonIdNumber.ReadOnly = true;
+            this.txtPersonIdNumber.Size = new System.Drawing.Size(94, 20);
+            this.txtPersonIdNumber.TabIndex = 16;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(112, 96);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(56, 13);
+            this.label28.TabIndex = 15;
+            this.label28.Text = "ID number";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(112, 72);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 13);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Birth date";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPersonBirthDate
+            // 
+            this.txtPersonBirthDate.Location = new System.Drawing.Point(12, 69);
+            this.txtPersonBirthDate.Name = "txtPersonBirthDate";
+            this.txtPersonBirthDate.ReadOnly = true;
+            this.txtPersonBirthDate.Size = new System.Drawing.Size(94, 20);
+            this.txtPersonBirthDate.TabIndex = 13;
+            // 
+            // lbPersonAccounts
+            // 
+            this.lbPersonAccounts.FormattingEnabled = true;
+            this.lbPersonAccounts.Location = new System.Drawing.Point(199, 17);
+            this.lbPersonAccounts.Name = "lbPersonAccounts";
+            this.lbPersonAccounts.Size = new System.Drawing.Size(149, 199);
+            this.lbPersonAccounts.TabIndex = 17;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 474);
+            this.ClientSize = new System.Drawing.Size(772, 506);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnChargeFee);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
@@ -1050,6 +1228,10 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1143,6 +1325,22 @@
         private System.Windows.Forms.TextBox txtTransactionDetailsCurrency;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnChargeFee;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtPersonTransactionCurrency;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtPersonTransactionAmount;
+        private System.Windows.Forms.Button btnCreatePerson;
+        private System.Windows.Forms.TextBox txtPersonIdNumber;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtPersonBirthDate;
+        private System.Windows.Forms.TextBox txtPersonLastName;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtPersonFirstName;
+        private System.Windows.Forms.ListBox lbPersonAccounts;
     }
 }
 

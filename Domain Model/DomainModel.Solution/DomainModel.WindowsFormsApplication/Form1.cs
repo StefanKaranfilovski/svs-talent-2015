@@ -9,17 +9,37 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
+using DomainModel.Libraries.Party;
+using System.Text;
 
 namespace DomainModel.WindowsFormsApplication
 {
     public partial class frmMain : Form
     {
+        /// <summary>
+        /// Holds the number of calls to the anonymous method
+        /// </summary>
+        private int countAnonymousMethodCalls = 0;
+
         public frmMain()
         {
             InitializeComponent();
         }
 
         #region Event Handlers
+
+        /// <summary>
+        /// Handling the "Click" event on the "Create Person" button
+        /// Creates new Person object and populates the specific textboxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCreatePerson_Click(object sender, EventArgs e)
+        {
+            Person person = CreatePerson();
+
+            PopulatePerson(person);
+        }
 
         /// <summary>
         /// Handling the "Click" event on the "Create Transaction Account" button
@@ -263,7 +283,7 @@ namespace DomainModel.WindowsFormsApplication
             TimePeriod timePeriod = new TimePeriod();
             timePeriod.Period = txtDepositAccountTimePeriodPeriod.MakeInt32();
             timePeriod.Unit = SetUnitOfTimeFromComboBox(cbDepositAccountTimePeriodUnit.MakeString());
-
+            
             InterestRate interestRate = new InterestRate();
             interestRate.Percent = txtDepositAccountInterestRatePercent.MakeDecimal();
             interestRate.Unit = SetUnitOfTimeFromComboBox(cbDepositAccountInterestRateUnit.MakeString());
@@ -273,6 +293,14 @@ namespace DomainModel.WindowsFormsApplication
             DateTime endDate = dtpDepositAccountEndDate.MakeDateTime();
             ITransactionAccount transactionAccount = CreateTransactionAccount();
             ILoanAccount loanAccount = new LoanAccount(currency, timePeriod, interestRate, startDate, endDate, transactionAccount);
+            
+            // Setting an anonymous method on the OnBalanceChanged event
+            loanAccount.OnBalanceChanged += delegate
+            {
+                Debug.WriteLine("The balance of the loan account has been changed.");
+                countAnonymousMethodCalls++;
+                Debug.WriteLine("The anonymous method has been called " + countAnonymousMethodCalls + " times");
+            };
 
             return loanAccount;
         }
@@ -358,10 +386,22 @@ namespace DomainModel.WindowsFormsApplication
             }
             finally
             {
-                if (_errorOccured)
-                {
-                    MessageBox.Show(_errorMsg);
-                }
+                //if (_errorOccured)
+                //{
+                //    MessageBox.Show(_errorMsg);
+                //}
+            }
+            var anonymousVariable = new { FromAccount = transactonAccount, ToAccount = depositAccount, 
+                                          Amount = ca, HasError = _errorOccured, ErrorMessage = _errorMsg };
+
+            if (anonymousVariable.HasError) 
+            {
+                MessageBox.Show(anonymousVariable.ErrorMessage);
+            }
+            else
+            {
+                var msgbox = "Account from: " + anonymousVariable.FromAccount + " \nAccount to: " + anonymousVariable.ToAccount + " \nTransaction amount: " + anonymousVariable.Amount.Amount;
+                MessageBox.Show(msgbox);
             }
 
             DisplayLastTransactionDetails();
@@ -409,6 +449,50 @@ namespace DomainModel.WindowsFormsApplication
             IAccount[] accounts = lastEntry.Accounts;
             PopulateAccountFromProperties(accounts[0]);
             PopulateAccountToProperties((IDepositAccount)accounts[1]);
+        }
+
+        #endregion
+        
+        #region Person Methods
+
+        /// <summary>
+        /// Populates the Person object specific textboxes
+        /// </summary>
+        /// <param type=Person name="person"></param>
+        private void PopulatePerson(Person person)
+        {
+            txtPersonFirstName.Text = person.FirstName;
+            txtPersonLastName.Text = person.LastName;
+            txtPersonBirthDate.Text = person.BirthDate;
+            txtPersonIdNumber.Text = person.IdentificationNumber;
+
+            txtPersonTransactionAmount.Text = person.TransactionAccount.Limit.Amount.ToString();
+            txtPersonTransactionCurrency.Text = person.TransactionAccount.Limit.Currency.ToString();
+
+            // Foreach account in Accounts it adds new anonymous object to the listbox
+            foreach (IAccount account in person.Accounts)
+            {
+                lbPersonAccounts.Items.Add(new { account.ID, account.Number });
+            }
+        }
+
+        /// <summary>
+        /// Creates new Person object using object and collection initiliazers
+        /// </summary>
+        /// <returns>Person</returns>
+        private Person CreatePerson()
+        {
+            var accounts = new List<IAccount> { CreateDepositAccount(), CreateLoanAccount() };
+            var person = new Person
+            {
+                FirstName = "Stefan",
+                LastName = "Karanfilovski",
+                BirthDate = "13/08/1990",
+                IdentificationNumber = "1",
+                TransactionAccount = CreateTransactionAccount(),
+                Accounts = accounts
+            };
+            return person;
         }
 
         #endregion

@@ -46,6 +46,7 @@ namespace DomainModel.Libraries.Classes
         {
             CurrencyAmount c = new CurrencyAmount();
             c.Amount = limitAmount;
+            c.Currency = currency;
             this.Limit = c;
         }
 

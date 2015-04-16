@@ -163,7 +163,7 @@ namespace DomainModel.Libraries.Processors
             TransactionStatus status = new TransactionStatus();
             if (transactionType == TransactionType.Credit)
             {
-                foreach (IAccount account in accounts)
+                foreach (var account in accounts)
                 {
                     account.CreditAmount(amount);
                     //Calls the delegate foreach action
@@ -173,7 +173,7 @@ namespace DomainModel.Libraries.Processors
             }
             else if (transactionType == TransactionType.Debit)
             {
-                foreach (IAccount account in accounts)
+                foreach (var account in accounts)
                 {
                     account.DebitAmount(amount);
                     CallExternalLogger(account, transactionType, amount);
