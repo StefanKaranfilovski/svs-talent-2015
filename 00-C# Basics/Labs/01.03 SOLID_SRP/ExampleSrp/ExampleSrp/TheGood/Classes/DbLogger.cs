@@ -3,11 +3,16 @@ using System;
 
 namespace ExampleSrp.TheGood.Classes
 {
-    public class DbLogger : IErrorLogger
+    public class DbLogger : ILogger
     {
         public void LogError(string message)
         {
-            throw new NotImplementedException();
+            // Log error in database
+        }
+
+        public void LogChangeState(string message)
+        {
+            // Log ChangeState in database
         }
     }
 }

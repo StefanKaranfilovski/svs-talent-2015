@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54651A29-B373-4BF1-AFA8-2722C2FFD752}</ProjectGuid>
+    <ProjectGuid>{4DA5583C-EE5A-4341-8E94-D7C5D6C641D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExampleSrp</RootNamespace>
-    <AssemblyName>ExampleSrp</AssemblyName>
+    <RootNamespace>ExampleOcp</RootNamespace>
+    <AssemblyName>ExampleOcp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,13 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheBad\AcmeCar.cs" />
-    <Compile Include="TheGood\Classes\AcmeCar.cs" />
-    <Compile Include="TheGood\Classes\ConsoleLogger.cs" />
-    <Compile Include="TheGood\Classes\DbLogger.cs" />
-    <Compile Include="TheGood\Delegates.cs" />
-    <Compile Include="TheGood\Enums\LockState.cs" />
-    <Compile Include="TheGood\Interfaces\ILogger.cs" />
+    <Compile Include="TheBad\AcmeFactory.cs" />
+    <Compile Include="TheGood\Bike.cs" />
+    <Compile Include="TheGood\Car.cs" />
+    <Compile Include="TheGood\IGetProductPrice.cs" />
+    <Compile Include="TheGood\Motorcycle.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

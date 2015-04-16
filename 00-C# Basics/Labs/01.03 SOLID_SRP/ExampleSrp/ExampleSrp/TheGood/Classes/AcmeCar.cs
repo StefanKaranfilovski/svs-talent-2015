@@ -7,20 +7,17 @@ namespace ExampleSrp.TheGood
     {
         public LockState IsLocked { get; private set; }
 
-        private IErrorLogger log;
-
-        private IComputerLogger comLog;
+        private ILogger log;
 
         public event LogEventHandler logError;
 
         public event LogEventHandler logChangeState;
 
-        public AcmeCar(IErrorLogger i, IComputerLogger cl)
+        public AcmeCar(ILogger i)
         {
             log = i;
-            comLog = cl;
             logError += log.LogError;
-            logChangeState += comLog.LogChangeState;
+            logChangeState += log.LogChangeState;
         }
 
         public void Lock()
@@ -28,7 +25,6 @@ namespace ExampleSrp.TheGood
             try
             {
                 IsLocked = LockState.Locked;
-                //log state change in computer
                 logChangeState("CarLocked");
             }
             catch (Exception)
