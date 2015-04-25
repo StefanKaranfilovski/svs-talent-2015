@@ -1,0 +1,12 @@
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.DataLayer.dll.config
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.DataLayer.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.DataLayer.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.Models.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.Models.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.pdb
