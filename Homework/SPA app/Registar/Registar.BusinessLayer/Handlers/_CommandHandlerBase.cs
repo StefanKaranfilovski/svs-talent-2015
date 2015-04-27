@@ -10,8 +10,8 @@ namespace Registar.BusinessLayer.Handlers
     /// <summary>
     /// Abstract class for all command handlers
     /// </summary>
-    internal abstract class CommandHandlerBase<TRequest,TResult>:IHandler where TRequest:Command
-                                                                 where TResult:CommandResult
+    internal abstract class CommandHandlerBase<TRequest,TResult> : IHandler where TRequest:Command
+                                                                            where TResult:CommandResult
     {
         /// <summary>
         /// 
@@ -29,7 +29,6 @@ namespace Registar.BusinessLayer.Handlers
         /// <param name="command"></param>
         /// <returns></returns>
         protected abstract TResult ExecuteCommand(TRequest command);
-
     }
 
     internal interface IHandler

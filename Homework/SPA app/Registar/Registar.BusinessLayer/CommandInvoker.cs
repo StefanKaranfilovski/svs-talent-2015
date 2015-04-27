@@ -18,8 +18,8 @@ namespace Registar.BusinessLayer
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
-        public static TResult InvokeCommand<TRequest, TResult>(TRequest command) where TRequest:Command
-                                                                                 where TResult:CommandResult
+        public static TResult InvokeCommand<TRequest, TResult>(TRequest command) where TRequest : Command
+                                                                                 where TResult : CommandResult
         {
             //
             IHandler _handler = GetHandler<TRequest>();
@@ -42,7 +42,7 @@ namespace Registar.BusinessLayer
         {
             if (typeof (TRequest) == typeof (BikeSearchCommand))
             {
-                return new BikeSearchCommandHandler();
+                return new BikeSearchCommandHandler(new BikeSearchRegistarDb());
             }
             //
             return null;
