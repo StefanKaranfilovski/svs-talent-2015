@@ -9,7 +9,7 @@ using Registar.DomainModel;
 
 namespace Registar.BusinessLayer.Handlers
 {
-    internal class BikeSearchCommandHandler : CommandHandlerBase<BikeSearchCommand,BikeSearchResult>
+    public class BikeSearchCommandHandler : CommandHandlerBase<BikeSearchCommand,BikeSearchResult>
     {
         private IBikeSearchDataSource _dataSource;
 

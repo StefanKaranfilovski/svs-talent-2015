@@ -16,9 +16,9 @@ namespace Registar.Repository
             {
                 return (TRepository)(object)new BikeRepository();
             }
-            if (typeof(TRepository) == typeof(IUserRepository))
+            if (typeof(TRepository) == typeof(IBikeOwnerRepository))
             {
-                return (TRepository)(object)new UserRepository();
+                return (TRepository)(object)new BikeOwnerRepository();
             }
 
             return default(TRepository);

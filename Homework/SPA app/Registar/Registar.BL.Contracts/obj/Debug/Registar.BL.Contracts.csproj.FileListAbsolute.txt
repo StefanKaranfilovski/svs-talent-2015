@@ -1,0 +1,7 @@
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\bin\Debug\Registar.BL.Contracts.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\bin\Debug\Registar.BL.Contracts.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\bin\Debug\Registar.DomainModel.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\bin\Debug\Registar.DomainModel.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.csprojResolveAssemblyReference.cache

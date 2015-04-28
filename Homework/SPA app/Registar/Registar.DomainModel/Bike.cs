@@ -15,6 +15,9 @@ namespace Registar.DomainModel
     {
         public int BikeId { get; set; }
 
+        [Display(Name="Owner ID")]
+        public int BikeOwnerId { get; set; }
+
         [Display(Name="Register number")]
         public string RegNumber { get; set; }
 
@@ -25,18 +28,16 @@ namespace Registar.DomainModel
 
         public string Colour { get; set; }
 
+        public string City { get; set; }
+
+        [Display(Name="Number of gears")]
+        public byte SpeedsCount { get; set; }
+
         public object IgnoreMe { get; set; }
 
         [Timestamp]
         public byte[] TimeStamp { get; set; }
 
         public IEnumerable<BikeHistory> History { get; set; } 
-    }
-
-    public class BikeHistory
-    {
-        public int BikeId { get; set; }
-
-        public DateTime Date { get; set; }
     }
 }

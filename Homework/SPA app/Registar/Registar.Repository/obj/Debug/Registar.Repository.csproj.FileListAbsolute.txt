@@ -17,3 +17,5 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Repository\bin\Debug\NLog.config
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Repository\bin\Debug\NLog.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Repository\bin\Debug\NLog.xml
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Repository\bin\Debug\Registar.BL.Contracts.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Repository\bin\Debug\Registar.BL.Contracts.pdb

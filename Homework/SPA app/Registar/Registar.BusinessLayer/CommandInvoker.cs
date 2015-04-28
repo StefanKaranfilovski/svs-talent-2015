@@ -42,11 +42,13 @@ namespace Registar.BusinessLayer
         /// <returns></returns>
         private static IHandler GetHandler<TRequest>()
         {
+            //Ninject instance
             IKernel _kernel = new StandardKernel();
             _kernel.Load(Assembly.GetExecutingAssembly());
 
             if (typeof (TRequest) == typeof (BikeSearchCommand))
             {
+                // Injecting dependencies using Ninject
                 IBikeSearchDataSource _dataSource = _kernel.Get<IBikeSearchDataSource>();
 
                 return new BikeSearchCommandHandler(_dataSource);

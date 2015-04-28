@@ -47,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\BikeConfiguration.cs" />
+    <Compile Include="Configurations\BikeOwnerConfiguration.cs" />
+    <Compile Include="ContextFactory.cs" />
+    <Compile Include="ContextManager.cs" />
+    <Compile Include="Interfaces\IContextFactory.cs" />
     <Compile Include="Interfaces\IDbContext.cs" />
     <Compile Include="Interfaces\IRegistarDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

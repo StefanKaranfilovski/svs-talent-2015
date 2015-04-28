@@ -1,4 +1,5 @@
-﻿using Registar.Common.Interfaces;
+﻿using Registar.BusinessLayer.Contracts;
+using Registar.Common.Interfaces;
 using Registar.DomainModel;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Registar.Repository.Interfaces
 {
     public interface IBikeRepository : IRepository
     {
-        IList<Bike> SearchBikes(SearchFilter filter);
+        IList<Bike> SearchBikes(BikeSearchCommand filter);
     }
 }

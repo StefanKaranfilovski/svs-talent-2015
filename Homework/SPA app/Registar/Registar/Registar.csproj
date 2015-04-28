@@ -155,6 +155,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\Home\Index3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -175,6 +176,10 @@
     <Content Include="Views\Shared\_PartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Registar.BL.Contracts\Registar.BL.Contracts.csproj">
+      <Project>{336f7baf-bf7c-4709-84e4-1a26913f9ffc}</Project>
+      <Name>Registar.BL.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Registar.BusinessLayer\Registar.BusinessLayer.csproj">
       <Project>{173d84d5-e811-42dc-814c-e230c87bf5e5}</Project>
       <Name>Registar.BusinessLayer</Name>

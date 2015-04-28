@@ -53,17 +53,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BikeRepository.cs" />
-    <Compile Include="ContextFactory.cs" />
-    <Compile Include="ContextManager.cs" />
     <Compile Include="Interfaces\IBikeRepository.cs" />
-    <Compile Include="Interfaces\IContextFactory.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Interfaces\IBikeOwnerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryFactory.cs" />
-    <Compile Include="SearchFilter.cs" />
-    <Compile Include="UserRepository.cs" />
+    <Compile Include="BikeOwnerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Registar.BL.Contracts\Registar.BL.Contracts.csproj">
+      <Project>{336f7baf-bf7c-4709-84e4-1a26913f9ffc}</Project>
+      <Name>Registar.BL.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Registar.Common\Registar.Common.csproj">
       <Project>{2d50e276-0c4f-4ad9-b392-036d37fff0c5}</Project>
       <Name>Registar.Common</Name>

@@ -40,3 +40,5 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\NLog.xml
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Ninject.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Ninject.xml
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Registar.BL.Contracts.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Registar.BL.Contracts.pdb

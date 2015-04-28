@@ -3,7 +3,7 @@ using System;
 
 namespace Registar.BusinessLayer.Handlers
 {
-    interface IBikeSearchDataSource
+    public interface IBikeSearchDataSource
     {
         BikeSearchResult ExecuteCommand(BikeSearchCommand command);
     }
