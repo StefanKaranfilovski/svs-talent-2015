@@ -72,3 +72,12 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\obj\Debug\Registar.csprojResolveAssemblyReference.cache
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\obj\Debug\Registar.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\obj\Debug\Registar.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\Registar.Common.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\Registar.Repository.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\Registar.Common.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\Registar.Repository.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\NLog.config
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\NLog.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\NLog.xml
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\Ninject.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar\bin\Ninject.xml

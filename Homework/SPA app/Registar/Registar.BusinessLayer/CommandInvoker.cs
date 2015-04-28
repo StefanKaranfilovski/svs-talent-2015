@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Registar.BusinessLayer.Contracts;
 using Registar.BusinessLayer.Handlers;
+using Ninject;
+using System.Reflection;
 
 namespace Registar.BusinessLayer
 {
@@ -40,9 +42,14 @@ namespace Registar.BusinessLayer
         /// <returns></returns>
         private static IHandler GetHandler<TRequest>()
         {
+            IKernel _kernel = new StandardKernel();
+            _kernel.Load(Assembly.GetExecutingAssembly());
+
             if (typeof (TRequest) == typeof (BikeSearchCommand))
             {
-                return new BikeSearchCommandHandler(new BikeSearchRegistarDb());
+                IBikeSearchDataSource _dataSource = _kernel.Get<IBikeSearchDataSource>();
+
+                return new BikeSearchCommandHandler(_dataSource);
             }
             //
             return null;

@@ -1,0 +1,5 @@
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Common\bin\Debug\Registar.Common.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Common\bin\Debug\Registar.Common.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Common\obj\Debug\Registar.Common.csprojResolveAssemblyReference.cache
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Common\obj\Debug\Registar.Common.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Common\obj\Debug\Registar.Common.pdb

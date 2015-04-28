@@ -31,3 +31,12 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\obj\Debug\Registar.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\obj\Debug\Registar.BusinessLayer.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\obj\Debug\Registar.BusinessLayer.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Registar.Common.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Registar.Repository.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Registar.Common.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Registar.Repository.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\NLog.config
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\NLog.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\NLog.xml
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Ninject.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.BusinessLayer\bin\Debug\Ninject.xml
