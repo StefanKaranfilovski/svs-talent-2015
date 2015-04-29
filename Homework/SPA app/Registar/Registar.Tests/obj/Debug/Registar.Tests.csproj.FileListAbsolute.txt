@@ -50,7 +50,6 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\System.Web.WebPages.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.BusinessLayer.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.DomainModel.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.DataLayer.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\EntityFramework.dll
@@ -65,7 +64,6 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\System.Web.WebPages.xml
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.BusinessLayer.pdb
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.DomainModel.pdb
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.DataLayer.pdb
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\EntityFramework.xml
@@ -79,7 +77,9 @@ C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Regi
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\NLog.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\NLog.xml
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\NLog.config
-C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Ninject.dll
-C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Ninject.xml
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.BL.Contracts.dll
 C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.BL.Contracts.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.BusinessLayer.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Ninject.dll
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Registar.BusinessLayer.pdb
+C:\Users\Laptopo\Documents\GitHub\svs-talent-2015\Homework\SPA app\Registar\Registar.Tests\bin\Debug\Ninject.xml

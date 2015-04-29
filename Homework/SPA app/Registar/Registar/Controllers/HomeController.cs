@@ -14,17 +14,9 @@ namespace Registar.Controllers
     {
         //
         // GET: /Home/
-
         public ActionResult Index()
         {
-            //call BL
-            BikeSearchCommand _command = new BikeSearchCommand();
-            _command.PageIndex = 0;
-            _command.PageSize = 10;
-
-            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
-            //
-            return View("Index3", _result.Result);
+            return View("Index3");
         }
 
         public ActionResult Index2()
@@ -41,5 +33,17 @@ namespace Registar.Controllers
             return View("Index",_result);
         }
 
+
+        public JsonResult FillSearchBikes()
+        {
+            //call BL
+            BikeSearchCommand _command = new BikeSearchCommand();
+            _command.PageIndex = 0;
+            _command.PageSize = 10;
+
+            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
+
+            return Json(_result.Result, JsonRequestBehavior.AllowGet);
+        }
     }
 }
