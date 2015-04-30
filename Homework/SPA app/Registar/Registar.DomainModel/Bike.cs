@@ -38,6 +38,6 @@ namespace Registar.DomainModel
         [Timestamp]
         public byte[] TimeStamp { get; set; }
 
-        public IEnumerable<BikeHistory> History { get; set; } 
+        public IEnumerable<BikeHistory> History { get; set; }
     }
 }

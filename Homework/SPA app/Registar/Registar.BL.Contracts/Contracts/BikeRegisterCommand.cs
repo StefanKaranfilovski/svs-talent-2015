@@ -11,5 +11,7 @@ namespace Registar.BL.Contracts.Contracts
     public class BikeRegisterCommand : Command
     {
         public Bike Bike { get; set; }
+
+        public Bike BikeToRegister { get; set; }
     }
 }
